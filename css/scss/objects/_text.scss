@@ -1,6 +1,14 @@
 /* Passages of Text */
 .text {
-	
+	ul {
+		list-style: disc;
+		margin-left: 1.2em;
+	}
+
+	ol {
+		list-style: decimal;
+		margin-left: 1.2em;
+	}
 }
 
 /* Review Grade Tile */

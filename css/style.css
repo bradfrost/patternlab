@@ -245,58 +245,6 @@ blockquote {
   padding-left: 1rem;
   margin-bottom: 1rem; }
 
-.pullquote blockquote {
-  font-family: "HelveticaNeue", "Helvetica", "Arial", sans-serif;
-  font-style: italic;
-  border: none;
-  font-size: 1;
-  line-height: 1.5rem;
-  padding-left: 1.5rem;
-  margin-bottom: 1rem;
-  margin-top: -1rem; }
-  .pullquote blockquote cite {
-    position: absolute;
-    padding-left: 3rem; }
-  .pullquote blockquote:before {
-    content: " ";
-    height: 1.2rem;
-    display: block;
-    position: relative;
-    left: -2.2rem;
-    top: 1.125rem;
-    background: url(/patterns/images/quote-mark-b.png) no-repeat;
-    background-size: 1.5rem; }
-  .pullquote blockquote:after {
-    content: " . ";
-    color: transparent;
-    display: inline-block;
-    width: 1.5rem;
-    background: url(/patterns/images/quote-mark-e.png) no-repeat 0.25rem -0.125rem;
-    background-size: 1.1rem; }
-  @media all and (min-width: 46.8em) {
-    .pullquote blockquote {
-      font-size: 1.6rem;
-      line-height: 1.2; }
-      .pullquote blockquote:before {
-        background-size: 2rem; }
-      .pullquote blockquote:after {
-        background-size: 1.4rem; } }
-  @media all and (min-width: 60em) {
-    .pullquote blockquote {
-      font-size: 2.34rem;
-      font-siez: 1;
-      line-height: 1.155;
-      padding-left: 3rem; }
-      .pullquote blockquote:before {
-        height: 2.2rem;
-        background-size: 3.5rem;
-        top: 1.563rem;
-        left: -4rem; }
-      .pullquote blockquote:after {
-        background-position: 0.4rem -0.18rem;
-        background-size: 2rem;
-        width: 3rem; } }
-
 /* Horizontal Rule */
 hr {
   border: 0;
@@ -304,11 +252,9 @@ hr {
   background: gray;
   margin: 2rem 0; }
 
-small {
-  font-size: 0.7rem;
-  font-weight: bold;
-  color: gray;
-  text-transform: uppercase; }
+abbr {
+  border-bottom: 1px dotted gray;
+  cursor: help; }
 
 ol, ul {
   margin: 0;
@@ -827,6 +773,13 @@ td {
     $TEXT Styles
 \*------------------------------------*/
 /* Passages of Text */
+.text ul {
+  list-style: disc;
+  margin-left: 1.2em; }
+.text ol {
+  list-style: decimal;
+  margin-left: 1.2em; }
+
 /* Review Grade Tile */
 .grade {
   display: block;
@@ -985,8 +938,11 @@ td {
   padding: 1rem;
   border: 0;
   text-align: center; }
-  .btn:hover {
+  .btn:hover, .btn:focus {
     color: white; }
+  .btn.disabled {
+    background: #eeeeee;
+    color: #bbbbbb; }
 
 .btn-small {
   padding: 0.5rem; }

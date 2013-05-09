@@ -8,6 +8,8 @@
 
 <p>Superscript<sup>&reg;</sup></p>
 
+<p><small>This text is small for for fine print, etc.</small></p>
+
 <p>Abbreviation: <abbr title="HyperText Markup Language">HTML</abbr></p>
 
 <p><q cite="https://developer.mozilla.org/en-US/docs/HTML/Element/q">This text is a short inline quotation</q>

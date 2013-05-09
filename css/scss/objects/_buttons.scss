@@ -11,8 +11,13 @@
 	border: 0;
 	text-align: center;
 	
-	&:hover {
+	&:hover, &:focus {
 		color: $white;
+	}
+
+	&.disabled {
+		background: $gray-light-2;
+		color: $gray-light-4;
 	}
 }
 
