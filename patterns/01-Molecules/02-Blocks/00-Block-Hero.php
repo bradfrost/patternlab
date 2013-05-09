@@ -4,7 +4,7 @@
 			<?php inc('atom','landscape') ?>
 		</div>
 		<div class="b-text">
-			<h2 class="headline">'Walking Dead' finale: Best ratings yet</h2>
+			<h2 class="headline">Headline Text Lorem Ipsum Dolar Samet</h2>
 		</div>
 	</a>
 </div>

@@ -26,7 +26,7 @@ Making pattern libraries using Atomic Design
 - Use YML or JSON to store data
 - Annotations
 - Versioning
-- Clicking through to other templates
+- Clicking through to other t	emplates
 - Pattern Lab Themes: E-commerce, blog, brochure-ware, etc...
 
 Pattern Lab consists of a Builder and Viewer (isn, view modes, and project-specific data)

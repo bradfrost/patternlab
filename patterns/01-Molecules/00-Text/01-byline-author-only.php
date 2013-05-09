@@ -1,1 +1,1 @@
-<div class="byline">by <a href="#">Samantha Highfill</a></div>
+<div class="byline">by Author Name</div>

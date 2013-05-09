@@ -1,1 +1,1 @@
-<div class="byline">by <a href="#">Samantha Highfill</a>  | April 6, 2013 - 12:32am ET</div>
+<div class="byline">by Author Name <time datetime="2013-04-06T12:32+00:00">April 6, 2013 - 12:32am ET</time></div>
