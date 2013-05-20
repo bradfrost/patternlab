@@ -236,12 +236,9 @@ p {
 
 /* Blockquote */
 blockquote {
-  font-family: "HelveticaNeue", "Helvetica", "Arial", sans-serif;
   font-style: italic;
-  font-size: 1;
   border-left: 6px solid gray;
   color: gray;
-  line-height: 2rem;
   padding-left: 1rem;
   margin-bottom: 1rem; }
 

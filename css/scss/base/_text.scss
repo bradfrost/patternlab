@@ -5,12 +5,9 @@ p {
 
 /* Blockquote */
 blockquote {
-	font-family:$font;
     font-style:italic;
-    font-size:$font-size-norm;
     border-left:6px solid $gray;
     color: $gray;
-    line-height:$space-double;
 	padding-left: $pad;
 	margin-bottom: $space;
 }
