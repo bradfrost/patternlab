@@ -9,14 +9,7 @@
 			<?php inc('molecule','single-comment'); ?>
 			<?php inc('molecule','single-comment'); ?>
 			<?php inc('molecule','single-comment'); ?>
-			<div class="hide-small">
-				<?php inc('molecule','single-comment'); ?>
-				<?php inc('molecule','single-comment'); ?>
-				<?php inc('molecule','single-comment'); ?>
-				<?php inc('molecule','single-comment'); ?>
-				<?php inc('molecule','single-comment'); ?>
-			</div>
 		</div>
 	</div>
-	<a href="#comments-container" class="btn">Load more comments...</a>
+	<a href="#" class="btn">Load more comments...</a>
 </section>

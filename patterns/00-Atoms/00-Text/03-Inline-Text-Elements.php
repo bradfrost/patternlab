@@ -14,4 +14,4 @@
 
 <p><q cite="https://developer.mozilla.org/en-US/docs/HTML/Element/q">This text is a short inline quotation</q>
 
-<p><code>This is what code looks like.</code></p>
+<p><code>This is what inline code looks like.</code></p>

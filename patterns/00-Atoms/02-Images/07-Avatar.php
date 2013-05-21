@@ -1,1 +1,1 @@
-<img src="<?php echo $absolutePath; ?>images/avatar.png" alt="Avatar" />
+<img src="<?php echo $absolutePath; ?>images/fpo_avatar.png" alt="Avatar" />

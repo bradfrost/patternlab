@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Pattern Lab</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width" />
+		<link rel="stylesheet" href="/styleguide/css/styleguide.css" media="all" />
+		
+		<!--For style guide only. Move all scripts to bottom for production-->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="/styleguide/js/jquery.js"><\/script>')</script>
+		<!--For style guide only. Move all scripts to bottom for production-->
+	</head>
+	<body>
+		<!--Style Guide Header-->
+		<header class="sg-header" role="banner">
+			<a href="#sg-nav-container" class="sg-nav-toggle">Menu</a>
+			<div class="sg-nav-container" id="sg-nav-container">
+				<ol class="sg-nav">
+						<li class="sg-nav-atoms"><a class="sg-acc-handle">Atoms</a><ol class="sg-acc-panel">
+							<li class="sg-nav-images"><a class="sg-acc-handle">Images</a><ol class="sg-acc-panel">
+								<li><a href="patterns/a-images-landscape-16x9/pattern.html" class="sg-pop">Landscape 16x9</a></li>
+								<li><a href="patterns/a-images-landscape-4x3/pattern.html" class="sg-pop">Landscape 4x3</a></li>
+								<li><a href="patterns/a-images-logo/pattern.html" class="sg-pop">Logo</a></li>
+								<li><a href="patterns/a-images-square/pattern.html" class="sg-pop">Square</a></li>
+							</ol></li>
+							<li class="sg-nav-text"><a class="sg-acc-handle">Text</a><ol class="sg-acc-panel">
+								<li><a href="patterns/a-text-h1/pattern.html" class="sg-pop">H1</a></li>
+								<li><a href="patterns/a-text-h2/pattern.html" class="sg-pop">H2</a></li>
+								<li><a href="patterns/a-text-h3/pattern.html" class="sg-pop">H3</a></li>
+								<li><a href="patterns/a-text-h4/pattern.html" class="sg-pop">H4</a></li>
+								<li><a href="patterns/a-text-h5/pattern.html" class="sg-pop">H5</a></li>
+								<li><a href="patterns/a-text-h6/pattern.html" class="sg-pop">H6</a></li>
+								<li><a href="patterns/a-text-hr/pattern.html" class="sg-pop">Hr</a></li>
+								<li><a href="patterns/a-text-inline-a/pattern.html" class="sg-pop">Inline A</a></li>
+								<li><a href="patterns/a-text-inline-abbr/pattern.html" class="sg-pop">Inline Abbr</a></li>
+								<li><a href="patterns/a-text-inline-address/pattern.html" class="sg-pop">Inline Address</a></li>
+								<li><a href="patterns/a-text-inline-blockquote/pattern.html" class="sg-pop">Inline Blockquote</a></li>
+								<li><a href="patterns/a-text-inline-code/pattern.html" class="sg-pop">Inline Code</a></li>
+								<li><a href="patterns/a-text-inline-del/pattern.html" class="sg-pop">Inline Del</a></li>
+								<li><a href="patterns/a-text-inline-em/pattern.html" class="sg-pop">Inline Em</a></li>
+								<li><a href="patterns/a-text-inline-q/pattern.html" class="sg-pop">Inline Q</a></li>
+								<li><a href="patterns/a-text-inline-strong/pattern.html" class="sg-pop">Inline Strong</a></li>
+								<li><a href="patterns/a-text-inline-sup/pattern.html" class="sg-pop">Inline Sup</a></li>
+								<li><a href="patterns/a-text-paragraph/pattern.html" class="sg-pop">Paragraph</a></li>
+							</ol></li>
+						</ol></li>
+						<li class="sg-nav-molecules"><a class="sg-acc-handle">Molecules</a><ol class="sg-acc-panel">
+							<li class="sg-nav-blocks"><a class="sg-acc-handle">Blocks</a><ol class="sg-acc-panel">
+								<li><a href="patterns/m-blocks-block-hero/pattern.html" class="sg-pop">Block Hero</a></li>
+							</ol></li>
+							<li class="sg-nav-components"><a class="sg-acc-handle">Components</a><ol class="sg-acc-panel">
+								<li><a href="patterns/m-components-social-article/pattern.html" class="sg-pop">Social Article</a></li>
+							</ol></li>
+							<li class="sg-nav-forms"><a class="sg-acc-handle">Forms</a><ol class="sg-acc-panel">
+								<li><a href="patterns/m-forms-comment-form/pattern.html" class="sg-pop">Comment Form</a></li>
+								<li><a href="patterns/m-forms-search/pattern.html" class="sg-pop">Search</a></li>
+							</ol></li>
+							<li class="sg-nav-group"><a class="sg-acc-handle">Group</a><ol class="sg-acc-panel">
+								<li><a href="patterns/m-group-headings/pattern.html" class="sg-pop">Headings</a></li>
+								<li><a href="patterns/m-group-inline/pattern.html" class="sg-pop">Inline</a></li>
+							</ol></li>
+							<li class="sg-nav-navigation"><a class="sg-acc-handle">Navigation</a><ol class="sg-acc-panel">
+								<li><a href="patterns/m-navigation-primary-nav/pattern.html" class="sg-pop">Primary Nav</a></li>
+							</ol></li>
+							<li class="sg-nav-text"><a class="sg-acc-handle">Text</a><ol class="sg-acc-panel">
+								<li><a href="patterns/m-text-byline-author-time/pattern.html" class="sg-pop">Byline Author Time</a></li>
+							</ol></li>
+						</ol></li>
+						<li class="sg-nav-organisms"><a class="sg-acc-handle">Organisms</a><ol class="sg-acc-panel">
+							<li class="sg-nav-article"><a class="sg-acc-handle">Article</a><ol class="sg-acc-panel">
+								<li><a href="patterns/o-article-article-body/pattern.html" class="sg-pop">Article Body</a></li>
+							</ol></li>
+							<li class="sg-nav-global"><a class="sg-acc-handle">Global</a><ol class="sg-acc-panel">
+								<li><a href="patterns/o-global-footer/pattern.html" class="sg-pop">Footer</a></li>
+								<li><a href="patterns/o-global-header/pattern.html" class="sg-pop">Header</a></li>
+							</ol></li>
+							<li class="sg-nav-sections"><a class="sg-acc-handle">Sections</a><ol class="sg-acc-panel">
+								<li><a href="patterns/o-sections-section-partners/pattern.html" class="sg-pop">Section Partners</a></li>
+								<li><a href="patterns/o-sections-section-sponsored-links/pattern.html" class="sg-pop">Section Sponsored Links</a></li>
+							</ol></li>
+						</ol></li>
+						<li class="sg-nav-pages"><a class="sg-acc-handle">Pages</a><ol class="sg-acc-panel">
+							<li class="sg-nav-layouts"><a class="sg-acc-handle">Layouts</a><ol class="sg-acc-panel">
+								<li><a href="patterns/p-layouts-article/pattern.html" class="sg-pop">Article</a></li>
+							</ol></li>
+						</ol></li>
+				</ol>
+				<ul id="sync" class="sg-control sg-size sg-acc-panel">
+					<li><a href="#" id="navSyncButton" data-state="off">Nav Sync Disabled</a></li>
+					<li><a href="#" id="contentSyncButton" data-state="off">Content Sync Disabled</a></li>
+				</ul>				<div class="sg-controls">
+					<div class="sg-control-container">
+						<div class="sg-control-content">
+							<a href="#sg-nav" class="sg-acc-handle sg-control-trigger" id="sg-size-toggle">Size</a>
+							<ul class="sg-control sg-size sg-acc-panel" id="sg-nav">
+								<li class="sg-current-size">Size: <span class="sg-size-px">320</span>px / <span class="sg-size-em">20</span>em</li>
+								<li><a href="#" id="sg-size-s">S</a></li> 
+								<li><a href="#" id="sg-size-m">M</a></li>
+								<li><a href="#" id="sg-size-l">L</a></li>
+								<li><a href="#" id="sg-size-xl">XL</a></li>
+								<li class="sg-half"><a href="#" id="sg-size-random">Random</a></li>
+								<li class="sg-half"><a href="#" id="sg-size-disco">Disco</a></li>
+								<li class="sg-size-input sg-full">
+									<form method="post" action="#" id="sg-size-enter" >
+										<input id="sg-size-num" type="number" pattern="[0-9]*" min="180" max="999999" placeholder="Enter Size" />
+									</form>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!--
+				<div class="sg-control-container sg-view-container">
+						<div class="sg-control-content">
+							<a href="#" class="sg-acc-handle sg-control-trigger" id="sg-t-toggle">View</a>
+							<ul class="sg-control sg-view sg-acc-panel" id="sg-view">
+								<li><a href="#" id="sg-t-clean">Clean</a></li>
+								<li><a href="#" id="sg-t-annotations">Annotations</a></li>
+								<li><a href="#" id="sg-t-code">Code</a></li>
+							</ul>
+						</div>
+					</div>
+				-->
+				</div>			</div>
+		</header>
+		<!--End Style Guide Header-->
+		
+		<!-- Iframe -->
+		<div id="sg-vp-wrap">
+			<div id="sg-cover" style="width: 100%; height: 100%; display: none; position: absolute; z-index: 20; cursor: col-resize;"></div>
+			<div id="sg-gen-container" style="height: 100%; text-align: center; margin: 0 auto;">
+				<iframe id="sg-viewport" src="/styleguide.html"></iframe>
+				<div id="sg-rightpull-container" style="width: 10px; float: right; margin: 0; height: 100%; cursor: col-resize;">
+					<div id="sg-rightpull" style="margin: 0; width: 10px; height: 100%; background-color: #999;"></div>
+				</div>
+			</div>
+		</div>
+		<!--end iFrame-->
+		
+		<script src="/js/data-saver.js"></script>
+		<script src="/styleguide/js/styleguide.js"></script>
+		<script>
+			
+			var navSyncPort     = 8000;
+			var contentSyncPort = 8002;
+			
+		</script>
+		<script src="/listeners/synclisteners.js"></script>
+	</body>
+</html>
