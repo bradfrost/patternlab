@@ -34,9 +34,20 @@
 		$path = "styleguide.php";
 	}
 ?>
-<div id="sg-vp-wrap"><iframe id="sg-viewport" src="<?php echo $path; ?>"></iframe></div>
-<!--end iFrame-->
 
-<script type="text/javascript" src="styleguide/js/styleguide.js "></script>
+<!-- Iframe -->
+<div id="sg-vp-wrap">
+	<div id="sg-cover" style="width: 100%; height: 100%; display: none; position: absolute; z-index: 20; cursor: col-resize;"></div>
+	<div id="sg-gen-container" style="height: 100%; text-align: center; margin: 0 auto;">
+		<iframe id="sg-viewport" src="<?php echo $path; ?>"></iframe>
+		<div id="sg-rightpull-container" style="width: 10px; float: right; margin: 0; height: 100%; cursor: col-resize;">
+			<div id="sg-rightpull" style="margin: 0; width: 10px; height: 100%; background-color: #999;"></div>
+		</div>
+	</div>
+</div>
+<!--end iFrame-->
+<!--end iFrame-->
+<script src="styleguide/js/data-saver.js"></script>
+<script src="styleguide/js/styleguide.js "></script>
 </body>
 </html>

@@ -279,23 +279,26 @@ html, body {
       bottom: 0;
       left: 0;
       right: 0;
-      z-index: 0;
-      -webkit-transition: left 0.3s ease-out;
-      -moz-transition: left 0.3s ease-out;
-      -ms-transition: left 0.3s ease-out;
-      -o-transition: left 0.3s ease-out;
-      transition: left 0.3s ease-out; } }
+      z-index: 0; } }
+  #sg-vp-wrap.wrap-animate {
+    -webkit-transition: left 0.3s ease-out;
+    -moz-transition: left 0.3s ease-out;
+    -ms-transition: left 0.3s ease-out;
+    -o-transition: left 0.3s ease-out;
+    transition: left 0.3s ease-out; }
 
 #sg-viewport {
+  border: 0;
+  x-margin: 0 auto;
+  height: 100%;
+  width: 100%; }
+
+.vp-animate {
   -webkit-transition: width 0.8s ease-out;
   -moz-transition: width 0.8s ease-out;
   -ms-transition: width 0.8s ease-out;
   -o-transition: width 0.8s ease-out;
-  transition: width 0.8s ease-out;
-  border: 0;
-  margin: 0 auto;
-  height: 100%;
-  width: 100%; }
+  transition: width 0.8s ease-out; }
 
 /* Section Head */
 .sg-head {
