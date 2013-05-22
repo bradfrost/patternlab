@@ -334,7 +334,6 @@ html, body {
 .sg-clean .sg-main {
   padding: 0; }
 
-/* Code View Blocks */
 .sg-code {
   clear: both;
   background: #dddddd;
@@ -347,7 +346,6 @@ html, body {
   word-wrap: break-word;
   white-space: pre-wrap; }
 
-/* Demo to show grid system */
 .demo {
   overflow: hidden;
   margin-bottom: 1rem; }
@@ -366,3 +364,20 @@ html, body {
     color: #dddddd; }
     .demo .gi .gi:nth-of-type(2n), .demo .demo-block .gi:nth-of-type(2n) {
       background: rgba(0, 0, 0, 0.3); }
+
+.sg-colors {
+  overflow: hidden; }
+  .sg-colors li {
+    float: left;
+    width: 5em;
+    border: 1px solid #dddddd;
+    padding: 0.3em;
+    margin: 0 0.2em 0.2em 0; }
+
+.sg-swatch {
+  display: block;
+  height: 4em;
+  margin-bottom: 0.2em; }
+
+.sg-label {
+  line-height: 1; }

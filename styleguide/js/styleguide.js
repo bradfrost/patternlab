@@ -48,7 +48,7 @@
 	$('#sg-size-s').on("click", function(e){
 		e.preventDefault();
 		killDisco();
-		sizeiframe(getRandom(320,500));
+		sizeiframe(getRandom(300,500));
 	});
 	
 	$('#sg-size-m').on("click", function(e){
@@ -83,15 +83,17 @@
 			discoMode = true;
 			discoID = setInterval(disco, 800);
 		}
-		
-	});
-	
-	$('#sg-size-enter').submit(function(){
-		var val = $('#sg-size-num').val();
-		sizeiframe(Math.floor(val));
-		return false;
 	});
 
+	$('.sg-size-px').keyup(function(e) {
+	    if(e.keyCode == 13) {
+	    	e.preventDefault();
+	        var val = $(this).text();
+			sizeiframe(Math.floor(val));
+			return false;
+	        $('.sg-size-px').blur();
+	    }
+	});
 
 	$sgViewport.load(function (){
 		var $sgSrc = $sgViewport.attr('src'),
@@ -291,12 +293,9 @@ $('#sg-rightpull').mousedown(function(event) {
 				updateValue("vpWidth",viewportWidth);
 			}
 			
-			updateViewportWidth(viewportWidth);
-			
+			updateViewportWidth(viewportWidth);	
 		}
-		
 	});
-	
 });
 
 // on "mouseup" we unbind the "mousemove" event and hide the cover again
@@ -330,6 +329,5 @@ function receiveIframeMessage(event) {
 	if (wsnConnected) {
 		wsn.send(event.data);
 	}
-	
 }
 window.addEventListener("message", receiveIframeMessage, false);

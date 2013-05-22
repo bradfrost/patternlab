@@ -385,21 +385,21 @@ body:after {
 
 /* Viewport */
 #sg-vp-wrap {
-  text-align: center;
-  background: rgba(0, 0, 0, 0.2);
-  height: 100%;
-  width: 100%;
+	text-align: center;
+	background: rgba(0, 0, 0, 0.2);
+	height: 100%;
+	width: 100%;
 
-  @media all and (min-width: $sg-bp-med) {
-      position: absolute;
-      top: 2em;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      z-index: 0;
-  }
+	@media all and (min-width: $sg-bp-med) {
+	  position: absolute;
+	  top: 2em;
+	  bottom: 0;
+	  left: 0;
+	  right: 0;
+	  z-index: 0;
+	}
 
-  &.wrap-animate {
+	&.wrap-animate {
 		-webkit-transition: left 0.3s ease-out;
 	    -moz-transition: left 0.3s ease-out;
 	    -ms-transition: left 0.3s ease-out;
@@ -465,7 +465,7 @@ body:after {
 }
 
 
-/* Code View Blocks */
+// Code View Blocks
 .sg-code {
 	clear: both;
 	background: $sg-tertiary;
@@ -479,11 +479,7 @@ body:after {
 	 white-space: pre-wrap;
 }
 
-
-
-
-
-/* Demo to show grid system */
+// Demo to show grid system - in this stylesheet because it shouldn't be included in the production styles
 .demo {
 	overflow: hidden;
 	margin-bottom: 1rem;
@@ -508,4 +504,27 @@ body:after {
 			background: $sg-tone-2;
 		}
 	}
+}
+
+// Style Guide color swatches
+.sg-colors {
+	overflow: hidden;
+
+	li {
+		float: left;
+		width: 5em;
+		border: 1px solid $sg-tertiary;
+		padding: 0.3em;
+		margin: 0 0.2em 0.2em 0;
+	}
+}
+
+.sg-swatch {
+	display: block;
+	height: 4em;
+	margin-bottom: 0.2em;
+}
+
+.sg-label {
+	line-height: 1;
 }
