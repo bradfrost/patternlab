@@ -136,7 +136,7 @@
 		}
 	});
 
-	//Set Manual 
+	//Set Manual Pixel Contenteditable region 
 	$('.sg-size-px').keyup(function(e) {
 		var val = $(this).text();
 
@@ -145,6 +145,19 @@
 			sizeiframe(Math.floor(val)); //Size Iframe to value of text box
 	    } else { //If any other character is entered
 	    	updateEmSizeReading(val);
+	    }
+	});
+
+	//Set Manual 
+	$('.sg-size-em').keyup(function(e) {
+		var val = $(this).text();
+		var bodySize = parseInt($('body').css('font-size'));
+
+	    if(e.keyCode == 13) { //If the Enter key is hit
+	    	e.preventDefault();
+			sizeiframe(Math.floor(val*bodySize)); //Size Iframe to value of text box
+	    } else { //If any other character is entered
+	    	updatePxSizeReading(val);
 	    }
 	});
 
