@@ -1,6 +1,6 @@
 <?php
 	include_once('functions.php');
-	$url = $_GET["url"];
+	$url = isset($_GET["url"]) ? $_GET["url"] : false;
 	
 	if($url) {
 		$path = "view.php/?url=".$url;
