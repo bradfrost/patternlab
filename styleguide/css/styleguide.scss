@@ -74,6 +74,7 @@ $offset-top: 2em;
 
 /* Breakpoints */
 $sg-bp-small : 24em;
+$sg-bp-small-2 : 30em;
 $sg-bp-med : 44em;
 $sg-bp-large : 64em;
 $sg-bp-xl : 80em;
@@ -399,11 +400,11 @@ body:after {
   width: 100%; 
 
   &.hay-mode {
-		-webkit-transition: all 20s linear;
-	    -moz-transition: all 20s linear;
-	    -ms-transition: all 20s linear;
-	    -o-transition: all 20s linear;
-	    transition: all 20s linear;
+		-webkit-transition: all 40s linear;
+	    -moz-transition: all 40s linear;
+	    -ms-transition: all 40s linear;
+	    -o-transition: all 40s linear;
+	    transition: all 40s linear;
 	}
 }
 
@@ -422,11 +423,11 @@ body:after {
 	margin: 0 auto;
 
 	&.hay-mode {
-		-webkit-transition: all 20s linear;
-	    -moz-transition: all 20s linear;
-	    -ms-transition: all 20s linear;
-	    -o-transition: all 20s linear;
-	    transition: all 20s linear;
+		-webkit-transition: all 40s linear;
+	    -moz-transition: all 40s linear;
+	    -ms-transition: all 40s linear;
+	    -o-transition: all 40s linear;
+	    transition: all 40s linear;
 	}
 }
 
@@ -563,18 +564,34 @@ body:after {
 	overflow: hidden;
 
 	li {
-		float: left;
-		width: 5em;
+		overflow: hidden;
 		border: 1px solid $sg-tertiary;
 		padding: 0.3em;
 		margin: 0 0.2em 0.2em 0;
+
+		@media all and (min-width: $sg-bp-small-2) {
+			float: left;
+			width: 5em;
+		}
 	}
 }
 
 .sg-swatch {
 	display: block;
-	height: 4em;
-	margin-bottom: 0.2em;
+	height: 1.5em;
+	width: 50%;
+	
+	@media all and (max-width: $sg-bp-small-2) {
+		float: left;
+		margin-right: 0.3em;
+	}
+
+	@media all and (min-width: $sg-bp-small-2) {
+		width: 100%;
+		height: 4em;
+		margin-bottom: 0.2em;
+	}
+	
 }
 
 .sg-label {

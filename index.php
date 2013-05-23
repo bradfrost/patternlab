@@ -88,8 +88,8 @@
 						<li><a href="#" id="sg-size-xl">XL</a></li>
 						<li class="sg-half"><a href="#" id="sg-size-full">Full</a></li>
 						<li class="sg-half"><a href="#" id="sg-size-random">Random</a></li>
-						<li class="sg-half"><a href="#" id="sg-size-disco">Disco</a></li>
-						<li class="sg-half"><a href="#" id="sg-size-hay">Hay!</a></li>
+						<li class="sg-half"><a href="#" class="mode-link" id="sg-size-disco">Disco</a></li>
+						<li class="sg-half"><a href="#" class="mode-link" id="sg-size-hay">Hay!</a></li>
 					</ul>
 				</div>
 			</div>

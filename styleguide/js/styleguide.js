@@ -46,6 +46,13 @@
 		e.preventDefault();
 		$(this).parents('ul').toggleClass('active');
 	});
+
+	//Add Active States for size controls
+	$('#sg-nav a').on("click", function(e){
+		var $this = $(this);
+		$('#sg-nav a').removeClass('active');
+		$this.addClass('active');
+	});
 	
 	//Size View Events
 
@@ -103,11 +110,9 @@
 		killHay();
 
 		if (discoMode) {
-			$(this).removeClass('active');
 			killDisco();
 
 		} else {
-			$(this).addClass('active');
 			discoMode = true;
 			discoID = setInterval(disco, 800);
 		}
@@ -122,13 +127,12 @@
 			killHay();
 		} else {
 			hayMode = true;
-			$(this).addClass('active');
-			sizeiframe(minViewportWidth);
-			var timeOutForAnimation = setTimeout(function(){
-				$sgViewport.addClass('hay-mode').width(maxViewportWidth);
+			$('#sg-gen-container').removeClass("vp-animate").width(minViewportWidth+14);
+			$('#sg-viewport').removeClass("vp-animate").width(minViewportWidth);		
+			var timeoutID = window.setTimeout(function(){
 				$('#sg-gen-container').addClass('hay-mode').width(maxViewportWidth+14);
-			},500);
-			
+				$('#sg-viewport').addClass('hay-mode').width(maxViewportWidth);
+			}, 200);	
 		}
 	});
 
@@ -138,9 +142,7 @@
 
 	    if(e.keyCode == 13) { //If the Enter key is hit
 	    	e.preventDefault();
-	        
 			sizeiframe(Math.floor(val)); //Size Iframe to value of text box
-	        $('.sg-size-px').blur();
 	    } else { //If any other character is entered
 	    	updateEmSizeReading(val);
 	    }
@@ -274,7 +276,6 @@
 	function killHay() {
 		var currentWidth = $('#sg-viewport').width();
 		hayMode = false;
-		$('#sg-size-hay').removeClass('active');
 		$sgViewport.removeClass('hay-mode');
 		$('#sg-gen-container').removeClass('hay-mode');
 		sizeiframe(Math.floor(currentWidth));
