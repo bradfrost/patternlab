@@ -307,15 +307,6 @@
 		$this.toggleClass('active');
 		$panel.toggleClass('active');
 	});
-
-	
-	$('.sg-control-trigger').on("click", function(e){
-			var $this = $(this),
-				$thisParent = $this.parents('.sg-control-container');
-			e.preventDefault();
-			$thisParent.toggleClass('active');
-			
-		});
 	
 	/* load iframe */
 	function loadIframe(iframeName, url) {

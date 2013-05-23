@@ -69,10 +69,9 @@
 		
 		<!--Begin Controls-->
 		<div class="sg-controls">
-			<div class="sg-control-container">
 				<div class="sg-control-content">
-					
 					<ul class="sg-control sg-size sg-acc-panel" id="sg-nav">
+						<!--
 						<li class="sg-view">
 							<a href="#" class="sg-acc-handle sg-control-trigger" id="sg-t-toggle">View</a>
 							<ul class="sg-view sg-acc-panel" id="sg-view">
@@ -81,6 +80,7 @@
 								<li><a href="#" id="sg-t-code">Code</a></li>
 							</ul>
 						</li>
+						-->
 						<li class="sg-current-size">Size: <span class="sg-input sg-size-px" contenteditable>320</span>px / <span class="sg-input sg-size-em" contenteditable>20</span>em</li>
 						<li><a href="#" id="sg-size-s">S</a></li> 
 						<li><a href="#" id="sg-size-m">M</a></li>
@@ -92,7 +92,6 @@
 						<li class="sg-half"><a href="#" class="mode-link" id="sg-size-hay">Hay!</a></li>
 					</ul>
 				</div>
-			</div>
 		</div>
 		<!--End Controls-->
 	</div>
