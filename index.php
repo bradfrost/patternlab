@@ -1,12 +1,6 @@
 <?php
 	include_once('functions.php');
-	$url = isset($_GET["url"]) ? $_GET["url"] : false;
-	
-	if($url) {
-		$path = "view.php/?url=".$url;
-	} else {
-		$path = "styleguide.php";
-	}
+	$path = isset($_GET["url"]) ? "view.php/?url=".$_GET["url"] : "styleguide.php";
 ?>
 
 <!DOCTYPE html>
