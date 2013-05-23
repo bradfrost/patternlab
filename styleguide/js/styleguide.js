@@ -1,9 +1,11 @@
 (function(w){
-	var sw = document.body.clientWidth,
-		sh = document.body.clientHeight,
-		bp = window.getComputedStyle(document.body,':after').getPropertyValue('content');
-		$sgViewport = $('#sg-viewport'),
-		$viewToggle = $('#sg-t-toggle'),
+	var sw = document.body.clientWidth, //Viewport Width
+		sh = document.body.clientHeight, //Viewport Height
+		minViewportWidth = 240, //Minimum Size for Viewport
+		maxViewportWidth = 2600, //Maxiumum Size for Viewport
+		bp = window.getComputedStyle(document.body,':after').getPropertyValue('content'), //Get breakpoint size from CSS
+		$sgViewport = $('#sg-viewport'), //Viewport element
+		$viewToggle = $('#sg-t-toggle'), //Toggle 
 		$sizeToggle = $('#sg-size-toggle'),
 		$tClean = $('#sg-t-clean'),
 		$tAnnotations = $('#sg-t-annotations'),
@@ -14,7 +16,8 @@
 		$vp = Object,
 		$sgPattern = Object,
 		discoID = false,
-		discoMode = false;
+		discoMode = false,
+		hayMode = false;
 	
 	
 	$(w).resize(function(){ //Update dimensions on resize
@@ -45,56 +48,105 @@
 	});
 	
 	//Size View Events
+
+	//Click Size Small Button
 	$('#sg-size-s').on("click", function(e){
 		e.preventDefault();
 		killDisco();
-		sizeiframe(getRandom(300,500));
+		killHay();
+		sizeiframe(getRandom(minViewportWidth,500));
 	});
 	
+	//Click Size Medium Button
 	$('#sg-size-m').on("click", function(e){
 		e.preventDefault();
 		killDisco();
+		killHay();
 		sizeiframe(getRandom(500,800));
 	});
 	
+	//Click Size Large Button
 	$('#sg-size-l').on("click", function(e){
 		e.preventDefault();
 		killDisco();
+		killHay();
 		sizeiframe(getRandom(800,1200));
 	});
 	
+	//Click Size Extra Large Button
 	$('#sg-size-xl').on("click", function(e){
 		e.preventDefault();
 		killDisco();
-		sizeiframe(getRandom(1200,1920));
+		killHay();
+		sizeiframe(getRandom(1200,maxViewportWidth));
+	});
+
+	//Click Full Width Button
+	$('#sg-size-full').on("click", function(e){
+		e.preventDefault();
+		killDisco();
+		killHay();
+		sizeiframe(sw);
 	});
 	
+	//Click Random Size Button
 	$('#sg-size-random').on("click", function(e){
 		e.preventDefault();
 		killDisco();
-		sizeiframe(getRandom(240,sw));
+		killHay();
+		sizeiframe(getRandom(minViewportWidth,sw));
 	});
 	
+	//Click for Disco Mode, which resizes the viewport randomly
 	$('#sg-size-disco').on("click", function(e){
 		e.preventDefault();
+		killHay();
+
 		if (discoMode) {
+			$(this).removeClass('active');
 			killDisco();
+
 		} else {
+			$(this).addClass('active');
 			discoMode = true;
 			discoID = setInterval(disco, 800);
 		}
 	});
 
+	//Stephen Hay Mode - "Start with the small screen first, then expand until it looks like shit. Time for a breakpoint!"
+	$('#sg-size-hay').on("click", function(e){
+		e.preventDefault();
+		killDisco();
+
+		if (hayMode) {
+			killHay();
+		} else {
+			hayMode = true;
+			$(this).addClass('active');
+			sizeiframe(minViewportWidth);
+			var timeOutForAnimation = setTimeout(function(){
+				$sgViewport.addClass('hay-mode').width(maxViewportWidth);
+				$('#sg-gen-container').addClass('hay-mode').width(maxViewportWidth+14);
+			},500);
+			
+		}
+	});
+
+	//Set Manual 
 	$('.sg-size-px').keyup(function(e) {
-	    if(e.keyCode == 13) {
+		var val = $(this).text();
+
+	    if(e.keyCode == 13) { //If the Enter key is hit
 	    	e.preventDefault();
-	        var val = $(this).text();
-			sizeiframe(Math.floor(val));
-			return false;
+	        
+			sizeiframe(Math.floor(val)); //Size Iframe to value of text box
 	        $('.sg-size-px').blur();
+	    } else { //If any other character is entered
+	    	updateEmSizeReading(val);
 	    }
 	});
 
+	//Scripts to run after the page has loaded into the iframe
 	$sgViewport.load(function (){
 		var $sgSrc = $sgViewport.attr('src'),
 			$vp = $sgViewport.contents(),
@@ -147,12 +199,22 @@
 	
 	//Resize the viewport
 	function sizeiframe(size) {
+		var theSize;
+
+		if(size>maxViewportWidth) {
+			theSize = maxViewportWidth;
+		} else if(size<minViewportWidth) {
+			theSize = minViewportWidth;
+		} else {
+			theSize = size;
+		}
+
 		$('#sg-gen-container').addClass("vp-animate");
 		$('#sg-viewport').addClass("vp-animate");
-		$('#sg-gen-container').width(size+14);
-		$('#sg-viewport').width(size);
-		updateSizeReading(size);
-		saveSize(size);
+		$('#sg-gen-container').width(theSize+14);
+		$('#sg-viewport').width(theSize);
+		updateSizeReading(theSize);
+		saveSize(theSize);
 	}
 	
 	function saveSize(size) {
@@ -178,11 +240,25 @@
 	displayWidth();
 	
 	function updateSizeReading(size) {
-		size = Math.floor(size);
-		var emSize = size/$bodySize;
-		$sizePx.text(size);
+		var theSize = Math.floor(size);
+		var emSize = theSize/$bodySize;
+		$sizePx.text(theSize);
 		$sizeEms.text(emSize.toFixed(2));
 	}
+
+	//Update Em Reading from Pixels
+	function updateEmSizeReading(pxVal) {
+		var emSize = pxVal/$bodySize;
+		$sizeEms.text(emSize.toFixed(2));
+	}
+
+	//Update Pixel Reading From Ems
+	function updatePxSizeReading(emVal) {
+		var pxSize = emVal*$bodySize;
+		$sizePx.text(pxSize);
+	}
+
+
 	
 	/* Disco Mode */
 	function disco() {
@@ -193,6 +269,15 @@
 		discoMode = false;
 		clearInterval(discoID);
 		discoID = false;
+	}
+
+	function killHay() {
+		var currentWidth = $('#sg-viewport').width();
+		hayMode = false;
+		$('#sg-size-hay').removeClass('active');
+		$sgViewport.removeClass('hay-mode');
+		$('#sg-gen-container').removeClass('hay-mode');
+		sizeiframe(Math.floor(currentWidth));
 	}
 	
 	/* Returns a random number between min and max */
@@ -285,7 +370,7 @@ $('#sg-rightpull').mousedown(function(event) {
 		
 		viewportWidth = (origClientX > event.clientX) ? origViewportWidth - ((origClientX - event.clientX)*2) : origViewportWidth + ((event.clientX - origClientX)*2);
 		
-		if (viewportWidth > 319) {
+		if (viewportWidth > 240) {
 			
 			if (!findValue('vpWidth')) {
 				addValue("vpWidth",viewportWidth);

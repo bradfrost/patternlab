@@ -1,9 +1,18 @@
-<?php include_once('functions.php'); ?>
+<?php
+	include_once('functions.php');
+	$url = $_GET["url"];
+	
+	if($url) {
+		$path = "view.php/?url=".$url;
+	} else {
+		$path = "styleguide.php";
+	}
+?>
 
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Pattern Library</title>
+    <title>Pattern Lab</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="styleguide/css/styleguide.css" media="all" />
@@ -54,17 +63,25 @@
 
 			listFolderFiles($patternsPath,array('index.php')); 
 			?>
-				<li><a href="<?php echo $absolutePath; ?>">All</a></li>
-			</ol>
-			<!--End Pattern Navigation-->
+			<li><a href="<?php echo $absolutePath; ?>">All</a></li>
+		</ol>
+		<!--End Pattern Navigation-->
 		
 		<!--Begin Controls-->
 		<div class="sg-controls">
 			<div class="sg-control-container">
 				<div class="sg-control-content">
-					<a href="#sg-nav" class="sg-acc-handle sg-control-trigger" id="sg-size-toggle">Size</a>
+					
 					<ul class="sg-control sg-size sg-acc-panel" id="sg-nav">
-						<li class="sg-current-size">Size: <span class="sg-size-px" contenteditable>320</span>px / <span class="sg-size-em" contenteditable>20</span>em</li>
+						<li class="sg-view">
+							<a href="#" class="sg-acc-handle sg-control-trigger" id="sg-t-toggle">View</a>
+							<ul class="sg-view sg-acc-panel" id="sg-view">
+								<li><a href="#" id="sg-t-clean">Clean</a></li>
+								<li><a href="#" id="sg-t-annotations">Annotations</a></li>
+								<li><a href="#" id="sg-t-code">Code</a></li>
+							</ul>
+						</li>
+						<li class="sg-current-size">Size: <span class="sg-input sg-size-px" contenteditable>320</span>px / <span class="sg-input sg-size-em" contenteditable>20</span>em</li>
 						<li><a href="#" id="sg-size-s">S</a></li> 
 						<li><a href="#" id="sg-size-m">M</a></li>
 						<li><a href="#" id="sg-size-l">L</a></li>
@@ -72,19 +89,9 @@
 						<li class="sg-half"><a href="#" id="sg-size-full">Full</a></li>
 						<li class="sg-half"><a href="#" id="sg-size-random">Random</a></li>
 						<li class="sg-half"><a href="#" id="sg-size-disco">Disco</a></li>
-						<li class="sg-half"><a href="#" id="sg-size-disco">Hay!</a></li>
+						<li class="sg-half"><a href="#" id="sg-size-hay">Hay!</a></li>
 					</ul>
 				</div>
-			</div>
-			<div class="sg-control-container sg-view-container">
-				<div class="sg-control-content">
-					<a href="#" class="sg-acc-handle sg-control-trigger" id="sg-t-toggle">View</a>
-					<ul class="sg-control sg-view sg-acc-panel" id="sg-view">
-						<li><a href="#" id="sg-t-clean">Clean</a></li>
-						<li><a href="#" id="sg-t-annotations">Annotations</a></li>
-						<li><a href="#" id="sg-t-code">Code</a></li>
-					</ul>
-				</div>	
 			</div>
 		</div>
 		<!--End Controls-->
@@ -92,29 +99,19 @@
 </header>
 <!--End Style Guide Header-->
 
-<!-- Iframe -->
-<?php
-	$url = $_GET["url"];
-	
-	if($url) {
-		$path = "view.php/?url=".$url;
-	} else {
-		$path = "styleguide.php";
-	}
-?>
 
 <!-- Iframe -->
 <div id="sg-vp-wrap">
-	<div id="sg-cover" style="width: 100%; height: 100%; display: none; position: absolute; z-index: 20; cursor: col-resize;"></div>
-	<div id="sg-gen-container" style="height: 100%; text-align: center; margin: 0 auto;">
+	<div id="sg-cover"></div>
+	<div id="sg-gen-container">
 		<iframe id="sg-viewport" src="<?php echo $path; ?>"></iframe>
-		<div id="sg-rightpull-container" style="width: 10px; float: right; margin: 0; height: 100%; cursor: col-resize;">
-			<div id="sg-rightpull" style="margin: 0; width: 10px; height: 100%; background-color: #999;"></div>
+		<div id="sg-rightpull-container">
+			<div id="sg-rightpull"></div>
 		</div>
 	</div>
 </div>
 <!--end iFrame-->
-<!--end iFrame-->
+
 <script src="styleguide/js/data-saver.js"></script>
 <script src="styleguide/js/styleguide.js "></script>
 </body>

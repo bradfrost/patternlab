@@ -54,6 +54,7 @@ $sg-tertiary : #ddd;
 $sg-quaternary : #fff;
 $sg-quinary : #f7f7f7;
 $sg-tint : rgba(255,255,255,0.05);
+$sg-tint-2 : rgba(255,255,255,0.25);
 $sg-tone : rgba(0,0,0,0.1);
 $sg-tone-2 : rgba(0,0,0,0.3);
 
@@ -76,6 +77,8 @@ $sg-bp-small : 24em;
 $sg-bp-med : 44em;
 $sg-bp-large : 64em;
 $sg-bp-xl : 80em;
+
+$animate-quick: 0.2s;
 
 
 
@@ -127,8 +130,11 @@ body:after {
 	color: $sg-quaternary;
 	font-family: $sg-font;
 	text-transform: uppercase;
-	
-	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	width: 100%;
 	
 	* {
 		-moz-box-sizing: border-box;
@@ -154,20 +160,11 @@ body:after {
 		padding: $sg-pad;
 		@include sg-transition(background,0.15s,ease-out);
 		@include sg-transition(color,0.15s,ease-out);
-		&:hover, &:focus {
+		
+		&:hover, &:focus, &.active {
 			color: $sg-quaternary;
 			background: $sg-tint;
 		}
-	}
-	
-	@media all and (min-width: $sg-bp-med) {
-		display: block;
-		position: fixed;
-		top: 0;
-		left: 0;
-		z-index: 2;
-		width: 100%;
-		@include sg-transition(left,0.3s,ease-out);
 	}
 }
 
@@ -203,7 +200,6 @@ body:after {
 	
 	> li {
 		
-		
 		@media all and (min-width: $sg-bp-med) {
 			border-bottom: 0;
 			border-right: 1px solid $sg-tint;
@@ -218,7 +214,6 @@ body:after {
 			
 		}
 	}
-
 }
 
 .sg-nav-Pages {
@@ -327,18 +322,34 @@ body:after {
 .sg-size {
 	li {
 		float: left;
-		width: 25%;
-		text-align: center;
-		
-		@media all and (min-width: $sg-bp-large) {
-			width: auto;
-		}
 	}
 	
+	.sg-input {
+		padding: 0.1em;
+		-webkit-transition: all $animate-quick ease-out;
+	    -moz-transition: all $animate-quick ease-out;
+	    -ms-transition: all $animate-quick ease-out;
+	    -o-transition: all $animate-quick ease-out;
+	    transition: all $animate-quick ease-out;
+
+		&:active, &:focus {
+			outline: 0;
+			background: $sg-quinary;
+			color: #000;
+		}
+	}
+
 	.sg-current-size {
 		font-size: 70%;
 		color: $sg-secondary;
 		padding: 0.95em;
+
+		&:hover {
+			.sg-input {
+				background: $sg-quinary;
+				color: #000;
+			}
+		}
 	}
 	
 	li.sg-half {
@@ -347,40 +358,12 @@ body:after {
 			width: auto;
 		}
 	}
-	
-	li.sg-full {
-		width: 100%;
-		@media all and (min-width: $sg-bp-large) {
-			width: 7em;
-		}
-	}
-	
-	li.sg-size-input {
-		border: 0;
-		border-top: 1px solid $sg-tint;
-	}
-	
-	input {
-		display: block;
-		width: 100%;
-		padding: 0.75em 2em 0.75em 1em;
-		margin: 0;
-		color: #fff;
-		border: 0;
-		background: none;
-		text-transform: uppercase;
-		
-		&:focus {
-			outline: 0;
-			background: $sg-tint;
-		}
-	}
 }
 
 
 
 /*------------------------------------*\
-    $STYLE GUIDE MAIN CONTAINER 
+    $STYLE GUIDE VIEWPORT
 \*------------------------------------*/
 
 /* Viewport */
@@ -406,6 +389,7 @@ body:after {
 	    -o-transition: left 0.3s ease-out;
 	    transition: left 0.3s ease-out;
 	}
+
 }
 
 #sg-viewport {
@@ -413,6 +397,66 @@ body:after {
   x-margin: 0 auto;
   height: 100%;
   width: 100%; 
+
+  &.hay-mode {
+		-webkit-transition: all 20s linear;
+	    -moz-transition: all 20s linear;
+	    -ms-transition: all 20s linear;
+	    -o-transition: all 20s linear;
+	    transition: all 20s linear;
+	}
+}
+
+#sg-cover {
+	width: 100%; 
+	height: 100%; 
+	display: none; 
+	position: absolute; 
+	z-index: 20; 
+	cursor: col-resize;
+}
+
+#sg-gen-container {
+	height: 100%; 
+	text-align: center; 
+	margin: 0 auto;
+
+	&.hay-mode {
+		-webkit-transition: all 20s linear;
+	    -moz-transition: all 20s linear;
+	    -ms-transition: all 20s linear;
+	    -o-transition: all 20s linear;
+	    transition: all 20s linear;
+	}
+}
+
+#sg-rightpull-container {
+	width: 10px; 
+	float: right; 
+	margin: 0; 
+	height: 100%; 
+	cursor: col-resize;
+}
+
+#sg-rightpull {
+	margin: 0; 
+	width: 10px; 
+	height: 100%; 
+	background: #999;
+	-webkit-transition: background $animate-quick ease-out;
+    -moz-transition: background $animate-quick ease-out;
+    -ms-transition: background $animate-quick ease-out;
+    -o-transition: background $animate-quick ease-out;
+    transition: background $animate-quick ease-out;
+
+	&:hover {
+		background: #666;
+	}
+
+	&:active {
+		cursor: col-resize;
+		background: #444;
+	}
 }
 
 .vp-animate {
@@ -422,6 +466,14 @@ body:after {
   -o-transition: width 0.8s ease-out;
   transition: width 0.8s ease-out;
 }
+
+
+
+
+
+/*------------------------------------*\
+    $STYLE GUIDE CONTENT 
+\*------------------------------------*/
 
 /* Section Head */
 .sg-head {
