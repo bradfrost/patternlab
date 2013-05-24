@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="<?php echo $absolutePath; ?>styleguide/css/styleguide.css" media="all" />
     <link rel="stylesheet" href="<?php echo $absolutePath; ?>css/style.css" media="all" />
+	<style>
+		.has-comment {
+			cursor: help;
+		}
+	</style>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
     <script src="<?php echo $absolutePath; ?>js/modernizr.js"></script>
 </head>
 <body>
@@ -13,5 +19,6 @@
 		$url = $_GET["url"];
 		include	$patternsPath.$url;
 	?>
+	<script src="/styleguide/js/annotations-pattern.js"></script>
 </body>
 </html>
