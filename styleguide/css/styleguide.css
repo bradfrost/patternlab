@@ -54,7 +54,7 @@ html, body {
   padding: 0;
   -webkit-text-size-adjust: 100%; }
 
-@media all and (min-width: 64em) {
+@media all and (min-width: 65em) {
   body:after {
     content: 'large';
     display: none; } }
@@ -105,12 +105,13 @@ html, body {
       background: rgba(255, 255, 255, 0.05); }
 
 /* Navigation */
-.sg-header a.sg-nav-toggle {
+.sg-header .sg-nav-toggle {
   padding: 1em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
   position: relative;
   z-index: 2; }
   @media all and (min-width: 44em) {
-    .sg-header a.sg-nav-toggle {
+    .sg-header .sg-nav-toggle {
       display: none; } }
 
 @media all and (max-width: 44em) {
@@ -176,72 +177,91 @@ html, body {
 
 /* Controls (sizing, view mode) */
 .sg-controls {
-  background: #222222; }
+  border: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2; }
   .sg-controls .sg-acc-panel.active {
-    max-height: 16em; }
-  @media all and (min-width: 44em) {
-    .sg-controls {
-      border: 0;
-      position: absolute;
-      top: 0;
-      right: 0;
-      z-index: 2; } }
+    max-height: 17em; }
 
 .sg-control-trigger {
   border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
   @media all and (min-width: 44em) {
     .sg-control-trigger {
       border: 0; } }
-  @media all and (min-width: 64em) {
+  @media all and (min-width: 65em) {
     .sg-control-trigger {
       float: left;
       width: 6em; } }
 
-@media all and (min-width: 64em) {
-  .sg-control li {
+@media all and (min-width: 44em) {
+  .sg-control > li {
     float: left;
     border-bottom: 0;
     border-left: 1px solid rgba(255, 255, 255, 0.05); } }
-@media all and (min-width: 44em) {
-  .sg-control {
-    position: absolute;
-    top: 2em;
-    right: 0; } }
-@media all and (min-width: 64em) {
-  .sg-control {
-    position: static;
-    max-height: none;
-    float: left; } }
 
-@media all and (min-width: 64em) {
-  #sg-size-toggle {
-    display: none; } }
-
-.sg-size li {
+.sg-control > li {
   float: left; }
-.sg-size .sg-input {
+.sg-control .sg-input {
   padding: 0.1em;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   -ms-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out; }
-  .sg-size .sg-input:active, .sg-size .sg-input:focus {
+  .sg-control .sg-input:active, .sg-control .sg-input:focus {
     outline: 0;
     background: #f7f7f7;
     color: #000; }
-.sg-size .sg-current-size {
+
+@media all and (max-width: 65em) {
+  .sg-quarter {
+    float: left;
+    width: 25%;
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center; }
+    .sg-quarter:first-child {
+      border-left: 0; } }
+
+@media all and (max-width: 65em) {
+  .sg-half {
+    float: left;
+    width: 50%;
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center; }
+    .sg-half:nth-child(odd) {
+      border-left: 0; } }
+
+.sg-current-size {
   font-size: 70%;
   color: gray;
   padding: 0.95em; }
-  .sg-size .sg-current-size:hover .sg-input {
+  .sg-current-size:hover .sg-input {
     background: #f7f7f7;
     color: #000; }
-.sg-size li.sg-half {
-  width: 50%; }
-  @media all and (min-width: 64em) {
-    .sg-size li.sg-half {
-      width: auto; } }
+  @media all and (min-width: 65em) {
+    .sg-current-size {
+      float: left; } }
+
+.sg-size-options {
+  max-width: 10em; }
+  @media all and (min-width: 65em) {
+    .sg-size-options {
+      position: static;
+      max-height: none;
+      max-width: none; }
+      .sg-size-options li {
+        float: left;
+        border: 0;
+        border-left: 1px solid rgba(255, 255, 255, 0.05); } }
+
+.sg-view {
+  position: relative; }
+  .sg-view > ul {
+    position: absolute;
+    top: 2em;
+    left: 0; }
 
 /*------------------------------------*\
     $STYLE GUIDE VIEWPORT
@@ -365,12 +385,14 @@ html, body {
 .sg-clean .sg-main {
   padding: 0; }
 
-.sg-code {
+.sg-code, .sg-annotations {
   clear: both;
   background: #dddddd;
   color: #222222;
   padding: 1em;
-  margin-bottom: 1em;
+  margin: 1em 0; }
+
+.sg-code {
   white-space: -moz-pre-wrap;
   white-space: -pre-wrap;
   white-space: -o-pre-wrap;
