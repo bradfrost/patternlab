@@ -74,9 +74,10 @@
 						<li class="sg-view">
 							<a href="#" class="sg-acc-handle sg-control-trigger" id="sg-t-toggle">View</a>
 							<ul class="sg-view sg-acc-panel" id="sg-view">
-								<li><a href="#" id="sg-t-clean">Clean</a></li>
 								<li><a href="#" id="sg-t-annotations">Annotations</a></li>
 								<li><a href="#" id="sg-t-code">Code</a></li>
+								<li><a href="#" id="sg-t-clean">Clean</a></li>
+								<li><a href="<?php echo $path; ?>" target="_blank">Raw</a></li>
 							</ul>
 						</li>
 						<li class="sg-size">
