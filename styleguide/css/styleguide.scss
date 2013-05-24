@@ -76,7 +76,7 @@ $offset-top: 2em;
 $sg-bp-small : 24em;
 $sg-bp-small-2 : 30em;
 $sg-bp-med : 44em;
-$sg-bp-large : 64em;
+$sg-bp-large : 65em;
 $sg-bp-xl : 80em;
 
 $animate-quick: 0.2s;
@@ -172,8 +172,9 @@ body:after {
 
 
 /* Navigation */
-.sg-header a.sg-nav-toggle {
+.sg-header .sg-nav-toggle {
 	padding: $sg-pad;
+	border-bottom: 1px solid rgba(0,0,0,0);
 	position: relative;
 	z-index: 2;
 	@media all and (min-width: $sg-bp-med) {
@@ -262,18 +263,14 @@ body:after {
 
 /* Controls (sizing, view mode) */
 .sg-controls {
-	background: $sg-primary;
+	border: 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 2;
 	
 	.sg-acc-panel.active {
-		max-height: 16em;
-	}
-	
-	@media all and (min-width: $sg-bp-med) {
-		border: 0;
-		position: absolute;
-		top: 0;
-		right: 0;
-		z-index: 2;
+		max-height: 17em;
 	}
 }
 
@@ -291,37 +288,20 @@ body:after {
 }
 
 .sg-control {
-	li {
-		@media all and (min-width: $sg-bp-large) {
+	> li {
+		@media all and (min-width: $sg-bp-med) {
 			float: left;
 			border-bottom: 0;
 			border-left: 1px solid $sg-tint;
 		}
 	}
-
-	@media all and (min-width: $sg-bp-med) {
-		position: absolute;
-		top: $offset-top;
-		right: 0;
-	}
-	
-	@media all and (min-width: $sg-bp-large) {
-		position: static;
-		max-height: none;
-		float: left;
-	}
 }
 
 
-#sg-size-toggle {
-	@media all and (min-width: $sg-bp-large) {
-		display: none;
-	}	
-}
 
 
-.sg-size {
-	li {
+.sg-control {
+	> li {
 		float: left;
 	}
 	
@@ -339,8 +319,35 @@ body:after {
 			color: #000;
 		}
 	}
+}
 
-	.sg-current-size {
+.sg-quarter {
+	@media all and (max-width: $sg-bp-large) {
+		float: left;
+		width: 25%;
+		border-left: 1px solid $sg-tint;
+		text-align: center;
+
+		&:first-child {
+			border-left: 0;
+		}
+	}
+}
+
+.sg-half {
+	@media all and (max-width: $sg-bp-large) {
+		float: left;
+		width: 50%;
+		border-left: 1px solid $sg-tint;
+		text-align: center;
+
+		&:nth-child(odd) {
+			border-left: 0;
+		}
+	}
+}
+
+.sg-current-size {
 		font-size: 70%;
 		color: $sg-secondary;
 		padding: 0.95em;
@@ -351,13 +358,35 @@ body:after {
 				color: #000;
 			}
 		}
-	}
-	
-	li.sg-half {
-		width: 50%;
+
 		@media all and (min-width: $sg-bp-large) {
-			width: auto;
+			float: left;
 		}
+	}
+
+.sg-size-options {
+	max-width: 10em;
+
+	@media all and (min-width: $sg-bp-large) {
+		position: static;
+		max-height: none;
+		max-width: none;
+
+		li {
+			float: left;
+			border: 0;
+			border-left: 1px solid $sg-tint;
+		}
+	}
+}
+
+.sg-view {
+	position: relative;
+
+	> ul {
+		position: absolute;
+		top: $offset-top;
+		left: 0;
 	}
 }
 
@@ -519,17 +548,20 @@ body:after {
 
 
 // Code View Blocks
-.sg-code {
+.sg-code, .sg-annotations {
 	clear: both;
 	background: $sg-tertiary;
 	color: $sg-primary;
 	padding: $sg-pad;
-	margin-bottom: $sg-space;
-	 white-space: -moz-pre-wrap;
-	 white-space: -pre-wrap;
-	 white-space: -o-pre-wrap;
-	 word-wrap: break-word; 
-	 white-space: pre-wrap;
+	margin: $sg-space 0;
+}
+
+.sg-code {
+	white-space: -moz-pre-wrap;
+	white-space: -pre-wrap;
+	white-space: -o-pre-wrap;
+	word-wrap: break-word; 
+	white-space: pre-wrap;
 }
 
 // Demo to show grid system - in this stylesheet because it shouldn't be included in the production styles

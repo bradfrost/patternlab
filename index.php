@@ -62,28 +62,31 @@
 		<!--End Pattern Navigation-->
 		
 		<!--Begin Controls-->
-		<div class="sg-controls">
+		<div class="sg-controls" id="sg-controls">
 				<div class="sg-control-content">
-					<ul class="sg-control sg-size sg-acc-panel" id="sg-nav">
-						<!--
+					<ul class="sg-control">
 						<li class="sg-view">
 							<a href="#" class="sg-acc-handle sg-control-trigger" id="sg-t-toggle">View</a>
 							<ul class="sg-view sg-acc-panel" id="sg-view">
-								<li><a href="#" id="sg-t-clean">Clean</a></li>
 								<li><a href="#" id="sg-t-annotations">Annotations</a></li>
 								<li><a href="#" id="sg-t-code">Code</a></li>
+								<li><a href="#" id="sg-t-clean">Clean</a></li>
+								<li><a href="<?php echo $path; ?>" target="_blank">Raw</a></li>
 							</ul>
 						</li>
-						-->
-						<li class="sg-current-size">Size: <span class="sg-input sg-size-px" contenteditable>320</span>px / <span class="sg-input sg-size-em" contenteditable>20</span>em</li>
-						<li><a href="#" id="sg-size-s">S</a></li> 
-						<li><a href="#" id="sg-size-m">M</a></li>
-						<li><a href="#" id="sg-size-l">L</a></li>
-						<li><a href="#" id="sg-size-xl">XL</a></li>
-						<li class="sg-half"><a href="#" id="sg-size-full">Full</a></li>
-						<li class="sg-half"><a href="#" id="sg-size-random">Random</a></li>
-						<li class="sg-half"><a href="#" class="mode-link" id="sg-size-disco">Disco</a></li>
-						<li class="sg-half"><a href="#" class="mode-link" id="sg-size-hay">Hay!</a></li>
+						<li class="sg-size">
+							<div class="sg-current-size sg-acc-handle">Size <span class="sg-input sg-size-px" contenteditable>320</span>px / <span class="sg-input sg-size-em" contenteditable>20</span>em</div>
+							<ul class="sg-acc-panel sg-size-options">
+								<li class="sg-quarter"><a href="#" id="sg-size-s">S</a></li> 
+								<li class="sg-quarter"><a href="#" id="sg-size-m">M</a></li>
+								<li class="sg-quarter"><a href="#" id="sg-size-l">L</a></li>
+								<li class="sg-quarter"><a href="#" id="sg-size-xl">XL</a></li>
+								<li class="sg-half"><a href="#" id="sg-size-full">Full</a></li>
+								<li class="sg-half"><a href="#" id="sg-size-random">Random</a></li>
+								<li class="sg-half"><a href="#" class="mode-link" id="sg-size-disco">Disco</a></li>
+								<li class="sg-half"><a href="#" class="mode-link" id="sg-size-hay">Hay!</a></li>
+							</ul>
+						</li>
 					</ul>
 				</div>
 		</div>

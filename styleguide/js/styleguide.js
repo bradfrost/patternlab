@@ -7,11 +7,7 @@
 		$sgViewport = $('#sg-viewport'), //Viewport element
 		$viewToggle = $('#sg-t-toggle'), //Toggle 
 		$sizeToggle = $('#sg-size-toggle'),
-		$tClean = $('#sg-t-clean'),
 		$tAnnotations = $('#sg-t-annotations'),
-		$tCode = $('#sg-t-code'),
-		$tSidebar = $('#sg-t-sidebar'),
-		$tFull = $('#sg-t-full'),
 		$tSize = $('#sg-size'),
 		$vp = Object,
 		$sgPattern = Object,
@@ -48,9 +44,9 @@
 	});
 
 	//Add Active States for size controls
-	$('#sg-nav a').on("click", function(e){
+	$('#sg-controls a').on("click", function(e){
 		var $this = $(this);
-		$('#sg-nav a').removeClass('active');
+		$('#sg-controls a').removeClass('active');
 		$this.addClass('active');
 	});
 	
@@ -170,7 +166,7 @@
 		
 
 		//Clean View Trigger
-		$tClean.on("click", function(e){
+		$('#sg-t-clean').on("click", function(e){
 			e.preventDefault();
 			$(this).toggleClass('active');
 			$sgViewport.contents().hide();
@@ -180,7 +176,7 @@
 		});
 		
 		//Code View Trigger
-		$tCode.on("click", function(e){
+		$('#sg-t-code').on("click", function(e){
 			var $code = $vp.find('.sg-code');
 			e.preventDefault();
 			$(this).toggleClass('active');
@@ -191,17 +187,41 @@
 				$code.toggle();
 			}
 		});
+
+		//Annotation View Trigger
+		$('#sg-t-annotations').on("click", function(e){
+			var $annotations = $vp.find('.sg-annotations');
+			e.preventDefault();
+			$(this).toggleClass('active');
+			
+			if($vp.find('.sg-annotations').length==0) {
+				buildAnnotationView();
+			} else {
+				$annotations.toggle();
+			}
+		});
 		
-		
+		//Add code blocks after each pattern
 		function buildCodeView() {
 			$sgPattern.each(function(index) {
 				$this = $(this),
-				$thisHTML = $this.html().replace(/[<>]/g, function(m) { return {'<':'&lt;','>':'&gt;'}[m]}),
+				$thisHTML = $this.html().replace(/[<>]/g, function(m) { return {'<':'&lt;','>':'&gt;'}[m]}), 
 				$thisCode = $( '<code></code>' ).html($thisHTML);
 				
-				$('<pre class="sg-code" />').html($thisCode).appendTo($this);
+				$('<pre class="sg-code" />').html($thisCode).appendTo($this); //Create new node, fill it with the code text, then append it to the pattern
 			});
 			$vp.find('.sg-code').show();
+		}
+
+		//Add annotation blocks after each pattern
+		function buildAnnotationView() {
+			$sgPattern.each(function(index) { //Loop through each pattern
+				$this = $(this),
+				$thisAnnotation = "This is an example of an annotation. Eventually this annotation will be replaced by a real annotation defined in an external JSON file."; //Example Annotation
+				
+				$('<div class="sg-annotations" />').html($thisAnnotation).appendTo($this); //Create new node, fill it with the annotation text, then append it to the pattern
+			});
+			$vp.find('.sg-annotations').show();
 		}
 		
 		//Pattern Click
