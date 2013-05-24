@@ -94,7 +94,7 @@
 								.sg-input-active {
 									background-color: #fff;
 									color: #000;
-								}
+								} 
 							</style>
 							<div class="sg-current-size"><form id="sg-form">Size <input type="text" class="sg-input sg-size-px" value="320">px / <input type="text" class="sg-input sg-size-em" value="20">em</form></div>
 							<ul class="sg-acc-panel sg-size-options">
