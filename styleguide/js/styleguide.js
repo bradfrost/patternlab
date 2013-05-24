@@ -410,19 +410,3 @@ var trackViewportWidth = true; // can toggle this feature on & off
 if (trackViewportWidth && (vpWidth = findValue("vpWidth"))) {
 	updateViewportWidth(vpWidth);
 }
-
-// watch the iframe source so that it can be sent back to everyone else.
-// based on the great MDN docs at https://developer.mozilla.org/en-US/docs/Web/API/window.postMessage
-function receiveIframeMessage(event) {
-		
-	// does the origin sending the message match the current host? if not dev/null the request
-	if (event.origin !== "http://"+window.location.host) {
-		return;
-	}
-	
-	// if connected to the nav sync websocket send a message to update other windows
-	if (wsnConnected) {
-		wsn.send(event.data);
-	}
-}
-window.addEventListener("message", receiveIframeMessage, false);
