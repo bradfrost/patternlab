@@ -359,21 +359,6 @@ function updateViewportWidth(size) {
 	sizeEms.text(emSize.toFixed(2));
 }
 
-// update the iframe with the source from clicked element in pull down menu. also close the menu
-// having it outside fixes an auto-close bug i ran into
-$('.sg-nav a').not('.sg-acc-handle').on("click", function(e){
-	
-	// update the iframe
-	$("#sg-viewport").attr('src',this.href);
-	
-	// close up the menu
-	$(this).parents('.sg-acc-panel').toggleClass('active');
-	$(this).parents('.sg-acc-panel').siblings('.sg-acc-handle').toggleClass('active');
-	
-	return false;
-	
-});
-
 // handles widening the "viewport"
 //   1. on "mousedown" store the click location
 //   2. make a hidden div visible so that it can track mouse movements and make sure the pointer doesn't get lost in the iframe
