@@ -133,28 +133,31 @@
 	});
 
 	//Set Manual Pixel Contenteditable region 
-	$('.sg-size-px').keyup(function(e) {
-		var val = $(this).text();
+	$('.sg-size-px').change(function(e) {
+		var val = $(this).val();
 
-	    if(e.keyCode == 13) { //If the Enter key is hit
-	    	e.preventDefault();
+	    //if(e.keyCode == 13) { //If the Enter key is hit
+	    //	e.preventDefault();
 			sizeiframe(Math.floor(val)); //Size Iframe to value of text box
-	    } else { //If any other character is entered
-	    	updateEmSizeReading(val);
-	    }
+			updateEmSizeReading(val);
+			$(this).blur();
+	    //} else { //If any other character is entered
+	    //	
+	    //}
 	});
 
 	//Set Manual 
-	$('.sg-size-em').keyup(function(e) {
-		var val = $(this).text();
+	$('.sg-size-em').change(function(e) {
+		var val = $(this).val();
 		var bodySize = parseInt($('body').css('font-size'));
 
-	    if(e.keyCode == 13) { //If the Enter key is hit
+	    //if(e.keyCode == 13) { //If the Enter key is hit
 	    	e.preventDefault();
 			sizeiframe(Math.floor(val*bodySize)); //Size Iframe to value of text box
-	    } else { //If any other character is entered
-	    	updatePxSizeReading(val);
-	    }
+			updatePxSizeReading(val);
+	    //} else { //If any other character is entered
+	    //	
+	    //}
 	});
 
 	//Scripts to run after the page has loaded into the iframe
@@ -268,8 +271,8 @@
 	function displayWidth() {
 		var vpWidth = $sgViewport.width() - 14;
 		var emSize = vpWidth/$bodySize;
-		$sizePx.text(vpWidth);
-		$sizeEms.text(emSize.toFixed(2));
+		$sizePx.val(vpWidth);
+		$sizeEms.val(emSize.toFixed(2));
 	}
 	
 	displayWidth();
@@ -277,20 +280,20 @@
 	function updateSizeReading(size) {
 		var theSize = Math.floor(size);
 		var emSize = theSize/$bodySize;
-		$sizePx.text(theSize);
-		$sizeEms.text(emSize.toFixed(2));
+		$sizePx.val(theSize);
+		$sizeEms.val(emSize.toFixed(2));
 	}
 
 	//Update Em Reading from Pixels
 	function updateEmSizeReading(pxVal) {
 		var emSize = pxVal/$bodySize;
-		$sizeEms.text(emSize.toFixed(2));
+		$sizeEms.val(emSize.toFixed(2));
 	}
 
 	//Update Pixel Reading From Ems
 	function updatePxSizeReading(emVal) {
 		var pxSize = emVal*$bodySize;
-		$sizePx.text(pxSize);
+		$sizePx.val(pxSize);
 	}
 
 
@@ -355,8 +358,8 @@ function updateViewportWidth(size) {
 	$("#sg-gen-container").width(Math.floor(size) + 14);
 	
 	var emSize = (Math.floor(size))/bodySize;
-	sizePx.text(Math.floor(size));
-	sizeEms.text(emSize.toFixed(2));
+	sizePx.val(Math.floor(size));
+	sizeEms.val(emSize.toFixed(2));
 }
 
 // handles widening the "viewport"
