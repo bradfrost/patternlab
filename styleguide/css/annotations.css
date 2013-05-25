@@ -1,0 +1,10 @@
+#comment-link {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	z-index: 4;
+	width: 100px;
+	height: 100px;
+	overflow: hidden;
+	line-height: 1;
+}

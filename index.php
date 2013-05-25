@@ -1,12 +1,6 @@
 <?php
 	include_once('functions.php');
-	$url = $_GET["url"];
-	
-	if($url) {
-		$path = "view.php/?url=".$url;
-	} else {
-		$path = "styleguide.php";
-	}
+	$path = isset($_GET["url"]) ? "view.php/?url=".$_GET["url"] : "styleguide.php";
 ?>
 
 <!DOCTYPE html>
@@ -16,6 +10,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="styleguide/css/styleguide.css" media="all" />
+    <link rel="stylesheet" href="styleguide/css/annotations.css" media="all" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="styleguide/js/jquery.js"><\/script>')</script>
 </head>
@@ -81,7 +76,28 @@
 							</ul>
 						</li>
 						<li class="sg-size">
-							<div class="sg-current-size sg-acc-handle">Size <span class="sg-input sg-size-px" contenteditable>320</span>px / <span class="sg-input sg-size-em" contenteditable>20</span>em</div>
+							<style>
+								#sg-form {
+									margin: 0;
+									border: 0;
+									padding: 0;
+								}
+								.sg-input {
+									margin: -2px 0 0 0;
+									padding: 0;
+									border: 1px solid #222;
+									background-color: #222;
+									color: gray;
+									width: 35px;
+									text-align: right;
+								}
+								
+								.sg-input-active {
+									background-color: #fff;
+									color: #000;
+								} 
+							</style>
+							<div class="sg-current-size"><form id="sg-form">Size <input type="text" class="sg-input sg-size-px" value="320">px / <input type="text" class="sg-input sg-size-em" value="20">em</form></div>
 							<ul class="sg-acc-panel sg-size-options">
 								<li class="sg-quarter"><a href="#" id="sg-size-s">S</a></li> 
 								<li class="sg-quarter"><a href="#" id="sg-size-m">M</a></li>
@@ -116,5 +132,6 @@
 
 <script src="styleguide/js/data-saver.js"></script>
 <script src="styleguide/js/styleguide.js "></script>
+<script src="styleguide/js/annotations-viewer.js "></script>
 </body>
 </html>
