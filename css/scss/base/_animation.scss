@@ -1,0 +1,15 @@
+.animate-fade {
+	@include transition(opacity, 0.3s, ease-out);
+
+	&:hover {
+		opacity: 0;
+	}
+}
+
+.animate-move {
+	@include transition(height, 0.3s, ease-out);
+
+	&:hover {
+		height: 10em;
+	}
+}

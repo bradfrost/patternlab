@@ -28,5 +28,14 @@
             <label for="textarea">Textarea</label>
             <textarea id="textarea" rows="8" cols="48" placeholder="Enter your message here"></textarea>
         </div>
+        <div class="field-container">
+            <label class="error">Error Input</label>
+            <input class="error" type="text" placeholder="Text Input">
+        </div>
+        <div class="field-container">
+            <label  class="valid">Valid</label>
+            <input  class="valid" type="text" placeholder="Text Input">
+        </div>
+
     </fieldset>
 </form>

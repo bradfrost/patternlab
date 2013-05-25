@@ -446,3 +446,12 @@ html, body {
 
 .sg-label {
   line-height: 1; }
+
+#comment-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  padding: 1em;
+  background: red; }

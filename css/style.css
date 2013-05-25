@@ -26,12 +26,6 @@
 /*------------------------------------*\
     $VARIABLES
 \*------------------------------------*/
-/* Colors */
-/* Typography */
-/* Layout */
-/* Defaults */
-/* Borders */
-/* Breakpoints */
 /*------------------------------------*\
     $MIXINS
 \*------------------------------------*/
@@ -376,6 +370,24 @@ td {
   border: 1px solid gray;
   padding: 0.2em; }
 
+.animate-fade {
+  -webkit-transition: opacity 0.3s ease-out;
+  -moz-transition: opacity 0.3s ease-out;
+  -ms-transition: opacity 0.3s ease-out;
+  -o-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out; }
+  .animate-fade:hover {
+    opacity: 0; }
+
+.animate-move {
+  -webkit-transition: height 0.3s ease-out;
+  -moz-transition: height 0.3s ease-out;
+  -ms-transition: height 0.3s ease-out;
+  -o-transition: height 0.3s ease-out;
+  transition: height 0.3s ease-out; }
+  .animate-move:hover {
+    height: 10em; }
+
 /*------------------------------------*\
     $LAYOUT
 \*------------------------------------*/
@@ -701,6 +713,8 @@ td {
   font-size: 1.4375em; }
 
 /* Passages of Text */
+.text a {
+  text-decoration: underline; }
 .text ul {
   list-style: disc;
   margin-left: 1.2em; }

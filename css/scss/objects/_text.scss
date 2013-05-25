@@ -11,6 +11,10 @@
 
 /* Passages of Text */
 .text {
+	a {
+		text-decoration: underline;
+	}
+
 	ul {
 		list-style: disc;
 		margin-left: 1.2em;

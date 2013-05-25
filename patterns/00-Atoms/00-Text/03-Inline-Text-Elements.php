@@ -1,3 +1,4 @@
+<div class="text">
 <p><a href="#">This is a text link</a></p>
 
 <p><strong>Strong is used to indicate strong importance</strong></p>
@@ -17,3 +18,4 @@
 <p><q cite="https://developer.mozilla.org/en-US/docs/HTML/Element/q">This text is a short inline quotation</q>
 
 <p><code>This is what inline code looks like.</code></p>
+</div>
