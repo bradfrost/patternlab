@@ -1,3 +1,14 @@
+/* Global Font Classes */
+.font-secondary {
+	font-family: $font-secondary;
+}
+
+/* Pullquote */
+.pullquote {
+	font-family: $font-secondary;
+	font-size: $font-size-large;
+}
+
 /* Passages of Text */
 .text {
 	ul {

@@ -6,7 +6,7 @@ p {
 /* Blockquote */
 blockquote {
     font-style:italic;
-    border-left:6px solid $gray;
+    border-left: 1px solid $gray;
     color: $gray;
 	padding-left: $pad;
 	margin-bottom: $space;
@@ -15,7 +15,7 @@ blockquote {
 /* Horizontal Rule */ 
 hr {
 	border: 0;
-    height: 1px;
+    height: $border-med;
     background: $gray;
     margin: $space-double 0;
 }

@@ -4,10 +4,26 @@
 
 .nav {
 	clear: both;
-	overflow: hidden;
-	max-height: 0;
 
 	&.active {
 		max-height: 40em;
+	}
+}
+
+//Pagination
+.pagination {
+	overflow: hidden;
+
+	li {
+		float: left;
+		border-right: 1px solid $gray-light-2;
+
+		&:last-child {
+			border: 0;
+		}
+	}
+
+	a {
+		padding: $pad;
 	}
 }

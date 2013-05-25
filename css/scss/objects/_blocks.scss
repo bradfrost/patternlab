@@ -11,11 +11,6 @@
 .block {
 	overflow: hidden;
 
-	.headline {
-		margin: 0;
-		@include font-size($font-size-norm,medium);
-	}
-
 	p:last-child {
 		margin-bottom: 0;
 	}
@@ -27,10 +22,6 @@
 		img {
 			display: block;
 		}
-	}
-
-	.headline {
-		padding: $pad-half;
 	}
 }
 
@@ -66,30 +57,6 @@
 	}
 }
 
-/* Block Small Thumbnail with Headline */
-.block-thumb-small {
-	.b-thumb {
-		width: 20%;
-		max-width: 6em;
-	}
-
-	.b-text {
-		width: 80%;
-	}
-}
-
-
-/* Headline-only block */
-.block-headline {
-	a {
-		display: block;
-		padding: $pad-half;
-	}
-
-	.headline, .byline {
-		display: inline;
-	}
-}
 
 /* Block Headline Summary */
 .block-headline-summary {

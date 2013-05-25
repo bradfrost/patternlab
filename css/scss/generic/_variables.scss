@@ -26,12 +26,13 @@ $brand-linkedin: #217bc1;
 
 /* Typography */
 $font : "HelveticaNeue", "Helvetica", "Arial", sans-serif;
-$font-secondary : "jaf-bernino-sans-condensed","HelveticaNeue", "Helvetica", "Arial", sans-serif;
-$font-size-norm : 1;
-$font-slightly-larger : 1.0625;
-$font-slightly-smaller : 0.875;
-$font-size-sm : 0.75;
-$font-size-large : 1.4375;
+$font-secondary : Georgia, Times, "Times New Roman", serif;
+
+$font-size-norm : 1em;
+$font-slightly-larger : 1.0625em;
+$font-slightly-smaller : 0.875em;
+$font-size-sm : 0.75em;
+$font-size-large : 1.4375em;
 
 /* Layout */
 $max-width: 82rem;
@@ -57,7 +58,7 @@ $pad-half : $pad/2;
 $pad-quarter :$pad/4;
 
 /* Borders */
-$border-med: 4px;
+$border-med: 3px;
 $border-thick: 7px;
 
 

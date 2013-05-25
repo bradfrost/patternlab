@@ -8,7 +8,9 @@
 
 <p>Superscript<sup>&reg;</sup></p>
 
-<p><small>This text is small for for fine print, etc.</small></p>
+<p>Subscript<sub>&reg;</sub></p>
+
+<p><small>This small text is small for for fine print, etc.</small></p>
 
 <p>Abbreviation: <abbr title="HyperText Markup Language">HTML</abbr></p>
 
