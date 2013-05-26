@@ -4,6 +4,12 @@
 
 .nav {
 	clear: both;
+	
+	a {
+		display: block;
+		padding: $pad;
+		border-top: 1px solid $gray-light-2;
+	}
 
 	&.active {
 		max-height: 40em;

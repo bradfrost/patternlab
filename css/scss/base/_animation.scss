@@ -7,9 +7,7 @@
 }
 
 .animate-move {
-	@include transition(height, 0.3s, ease-out);
-
-	&:hover {
-		height: 10em;
+	> .demo-shape {
+		@include transition(all, 0.8s, ease-in-out);
 	}
 }

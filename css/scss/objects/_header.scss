@@ -16,7 +16,7 @@
 
 .logo {
 	float: left;
-	max-width: 11rem;
+	max-width: 8rem;
 	margin: 0.4rem;
 }
 
@@ -28,8 +28,7 @@
 	line-height: 1;
 	border-left: 1px solid #dbdbdb;
 
-	&.active {
-		background: $gray-dark-2;
-		color: $white;
+	@media all and (min-width: $bp-med) {
+		display: none;
 	}
 }

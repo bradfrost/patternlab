@@ -3,13 +3,19 @@
 	font-family: $font-secondary;
 }
 
-/* Pullquote */
+//Intro text
+.intro {
+	font-size: $font-size-slightly-larger;
+	font-weight: bold;
+}
+
+//Pullquote
 .pullquote {
 	font-family: $font-secondary;
 	font-size: $font-size-large;
 }
 
-/* Passages of Text */
+//Text Passages
 .text {
 	a {
 		text-decoration: underline;

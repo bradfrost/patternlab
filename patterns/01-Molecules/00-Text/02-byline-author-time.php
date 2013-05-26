@@ -1,1 +1,1 @@
-<div class="byline">by Author Name <time datetime="2013-04-06T12:32+00:00">April 6, 2013 - 12:32am ET</time></div>
+<div class="byline">by Author Name on <time datetime="2013-04-06T12:32+00:00">June 3rd</time></div>

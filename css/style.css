@@ -58,16 +58,16 @@ header, footer, nav, section, article, hgroup, figure {
     $GLOBAL CLASSES
 \*------------------------------------*/
 /* Clearfix */
-.cf, .l-two-col, .l-two-col-alt, .l-three-col, [role=main] {
+.cf, .l-two-col, [role=main] {
   *zoom: 1; }
 
-.cf:before, .l-two-col:before, .l-two-col-alt:before, .l-three-col:before, [role=main]:before, .cf:after, .l-two-col:after, .l-two-col-alt:after, .l-three-col:after, [role=main]:after {
+.cf:before, .l-two-col:before, [role=main]:before, .cf:after, .l-two-col:after, [role=main]:after {
   content: " ";
   /* 1 */
   display: table;
   /* 2 */ }
 
-.cf:after, .l-two-col:after, .l-two-col-alt:after, .l-three-col:after, [role=main]:after {
+.cf:after, .l-two-col:after, [role=main]:after {
   clear: both; }
 
 /* Completely remove from the flow and screen readers. */
@@ -338,6 +338,12 @@ input[type="search"]::-webkit-search-decoration {
   display: block;
   color: #089e00; }
 
+input.error, textarea.error {
+  border-color: red; }
+
+input.valid, textarea.valid {
+  border-color: #089e00; }
+
 /*------------------------------------*\
     $SPECIFIC FORMS
 \*------------------------------------*/
@@ -379,14 +385,12 @@ td {
   .animate-fade:hover {
     opacity: 0; }
 
-.animate-move {
-  -webkit-transition: height 0.3s ease-out;
-  -moz-transition: height 0.3s ease-out;
-  -ms-transition: height 0.3s ease-out;
-  -o-transition: height 0.3s ease-out;
-  transition: height 0.3s ease-out; }
-  .animate-move:hover {
-    height: 10em; }
+.animate-move > .demo-shape {
+  -webkit-transition: all 0.8s ease-in-out;
+  -moz-transition: all 0.8s ease-in-out;
+  -ms-transition: all 0.8s ease-in-out;
+  -o-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out; }
 
 /*------------------------------------*\
     $LAYOUT
@@ -399,13 +403,6 @@ td {
   max-width: 82rem;
   margin: 0 auto;
   padding: 0.5rem; }
-  .lc.flush, .flush.header, .flush[role=main] {
-    padding-top: 0;
-    padding-bottom: 0; }
-
-.box {
-  padding: 0.5rem;
-  margin-bottom: 1rem; }
 
 /*------------------------------------*\
     $TEMPLATES
@@ -429,68 +426,6 @@ td {
     width: 19.75rem;
     margin-left: -19.75rem;
     padding-left: 1rem; } }
-
-/* Two Column Layout */
-@media all and (max-width: 60em) {
-  .l-two-col-alt > .l-sidebar {
-    clear: both; } }
-@media all and (min-width: 60em) {
-  .l-two-col-alt > .l-sidebar {
-    float: left;
-    width: 15rem;
-    padding-left: 1rem; } }
-@media all and (min-width: 60em) {
-  .l-two-col-alt .l-main {
-    margin-left: 15rem; } }
-
-/* Three Column Layout */
-.l-three-col {
-  /* Left Sidebar */ }
-  @media all and (min-width: 46.8em) and (max-width: 60em) {
-    .l-three-col > .l-main-container > .l-main {
-      padding: 0 3rem; } }
-  @media all and (min-width: 60em) {
-    .l-three-col > .l-main-container > .l-main {
-      margin-right: 19.75rem;
-      padding-right: 1rem; } }
-  @media all and (min-width: 73em) {
-    .l-three-col > .l-main-container > .l-main {
-      margin-left: 18%;
-      padding-left: 2rem; } }
-  .l-three-col .l-sidebar-1 {
-    display: none;
-    /* Initially hidden */ }
-    @media all and (min-width: 73em) {
-      .l-three-col .l-sidebar-1 {
-        display: block;
-        float: left;
-        width: 18%;
-        margin-left: -100%; } }
-  @media all and (min-width: 46.8em) and (max-width: 60em) {
-    .l-three-col .l-sidebar-2 {
-      padding: 0 3rem; } }
-  @media all and (max-width: 60em) {
-    .l-three-col .l-sidebar-2 {
-      clear: both; } }
-  @media all and (min-width: 60em) {
-    .l-three-col .l-sidebar-2 {
-      float: left;
-      width: 19.75rem;
-      margin-left: -19.75rem;
-      padding-left: 1rem; } }
-
-@media all and (min-width: 73em) {
-  .l-two-col-expose > .l-main-container > .l-main {
-    margin-left: 18%;
-    padding-left: 2rem; } }
-.l-two-col-expose > .l-sidebar {
-  display: none; }
-  @media all and (min-width: 73em) {
-    .l-two-col-expose > .l-sidebar {
-      display: block;
-      float: left;
-      width: 18%;
-      margin-left: -100%; } }
 
 /*------------------------------------*\
     $GRIDS
@@ -647,7 +582,7 @@ td {
 
 .logo {
   float: left;
-  max-width: 11rem;
+  max-width: 8rem;
   margin: 0.4rem; }
 
 .nav-toggle {
@@ -657,15 +592,19 @@ td {
   font-size: 1.3rem;
   line-height: 1;
   border-left: 1px solid #dbdbdb; }
-  .nav-toggle.active {
-    background: #131313;
-    color: white; }
+  @media all and (min-width: 46.8em) {
+    .nav-toggle {
+      display: none; } }
 
 /*------------------------------------*\
     $NAVIGATION
 \*------------------------------------*/
 .nav {
   clear: both; }
+  .nav a {
+    display: block;
+    padding: 1rem;
+    border-top: 1px solid #eeeeee; }
   .nav.active {
     max-height: 40em; }
 
@@ -707,12 +646,14 @@ td {
 .font-secondary {
   font-family: Georgia, Times, "Times New Roman", serif; }
 
-/* Pullquote */
+.intro {
+  font-size: 1.0625em;
+  font-weight: bold; }
+
 .pullquote {
   font-family: Georgia, Times, "Times New Roman", serif;
   font-size: 1.4375em; }
 
-/* Passages of Text */
 .text a {
   text-decoration: underline; }
 .text ul {
@@ -1114,8 +1055,11 @@ td {
 
 .article {
   padding: 0.5rem; }
-  .article .byline {
-    margin-bottom: 0.5rem; }
+
+.byline {
+  font-size: 0.875em;
+  font-style: italic;
+  margin-bottom: 0.5rem; }
 
 /* Wordpress Caption */
 .wp-caption-text {

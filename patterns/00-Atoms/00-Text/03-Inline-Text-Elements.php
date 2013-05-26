@@ -9,7 +9,7 @@
 
 <p>Superscript<sup>&reg;</sup></p>
 
-<p>Subscript<sub>&reg;</sub></p>
+<p>Subscript for things like H<sub>2</sub>O</p>
 
 <p><small>This small text is small for for fine print, etc.</small></p>
 

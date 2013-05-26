@@ -1,9 +1,11 @@
 .article {
 	padding: $pad-half;
+}
 
-	.byline {
-		margin-bottom: $space-half;
-	}
+.byline {
+	font-size: $font-size-slightly-smaller;
+	font-style: italic;
+	margin-bottom: $space-half;
 }
 
 /* Wordpress Caption */

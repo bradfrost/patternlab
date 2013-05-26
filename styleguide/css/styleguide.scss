@@ -591,6 +591,34 @@ body:after {
 	}
 }
 
+//Demo box for animation
+.demo-animate {
+	background: $sg-tertiary;
+	padding: $sg-pad;
+	margin-bottom: $sg-space;
+	text-align: center;
+}
+
+.animate-move {
+	position: relative;
+
+	.demo-shape {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: 20px;
+		background: $sg-secondary;
+	}
+
+	&:hover {
+		> .demo-shape {
+			left: 100%;
+			margin-left: -20px;
+		}
+	}
+}
+
 // Style Guide color swatches
 .sg-colors {
 	overflow: hidden;

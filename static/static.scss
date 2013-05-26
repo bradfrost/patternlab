@@ -6,9 +6,11 @@ gray: #808080;
 
 $orange : #c16100;
 $brown : #110000;
-$blue-light : #e1ebf8;
+$blue-light : #ddefff;
 $blue-med : #b7c6e9;
 $white : #fff;
+
+$dim : rgba(0,0,0,0.5);
 
 $max-width: 45em;
 
@@ -89,6 +91,11 @@ h3 {
 	margin: 0 0 0.2em;
 	text-transform: lowercase;
 }
+h4 {
+	font-size: 1em;
+	text-transform: lowercase;
+	margin: 0.5em 0;
+}
 
 h2 a, h3 a {
 	color: $brown;
@@ -121,11 +128,26 @@ input[type=search] {
 }
 /************End Global**************/
 
-/************Classes**************/
-.inactive {
-	color: #ddd;
+/************Layout**************/
+/* Grid 2up */
+.g-2up {
+	@media all and (min-width: $bp-med) {
+		> .gi {
+			float: left;
+			width: 50%;
+			
+			&:nth-of-type(odd) {
+				clear: left;
+				padding-right: 0.5em;
+			}
+
+			&:nth-of-type(even) {
+				padding-left: 0.5em;
+			}
+		}
+	}
 }
-/************End Classes**************/
+/************End Layout**************/
 
 /************Structure**************/
 .container {
@@ -159,8 +181,14 @@ input[type=search] {
 		font-size: 5rem;
 		display: inline-block;
 		padding-left: 6rem;
-	}
-	
+
+		.atom {
+			position: absolute;
+			top: 0.5rem;
+			left: 0;
+			z-index: 1;
+		}
+	}	
 }
 
 .atom {
@@ -175,13 +203,6 @@ input[type=search] {
 	-moz-animation: rotation 10s linear infinite;
 	-o-animation: rotation 10s linear infinite;
 	animation: rotation 10s linear infinite;
-
-	@media all and (min-width: $bp-med) {
-		position: absolute;
-		top: 0.5rem;
-		left: 0;
-		z-index: 1;
-	}
 
 	&:before {
 		content: "";
@@ -234,6 +255,7 @@ input[type=search] {
 section {
 	padding: 2em 0;
 	border-top: $border solid $blue-med;
+	overflow: hidden;
 }
 
 [role=contentinfo] {
@@ -268,6 +290,7 @@ section {
 	background: $brown;
 	border-bottom: $border solid $orange;
 	color: $white;
+	transition: background 0.15s ease-out;
 
 	&:hover {
 		background: $orange;
@@ -282,6 +305,53 @@ section {
 }
 /************End Buttons**************/
 
+//Atomic Design Flow
+.atomic-design {
+	margin: 2em 0 1em;
+	padding: 1em 0;
+	overflow: hidden;
+
+	li {
+		position: relative;
+		float: left;
+		width: 20%;
+		text-align: center;
+
+		&:after {
+			content: "";
+			position: absolute;
+			top: 27%;
+			left: 100%;
+			display: block;
+			width: 0;
+			height: 0;
+			margin-left: -5px;
+			pointer-events: none;
+			border-top: 8px solid transparent;
+			border-bottom: 8px solid transparent;
+			border-left: 10px solid $blue-med;
+		}
+
+		&:last-child:after {
+			display: none;
+		}
+	}
+}
+
+.section-icon {
+	.atom {
+		float: left;
+		margin: 0 2em 0 0;
+	}
+
+	h3 {
+		margin-top: 0;
+	}
+
+	p {
+		padding-left: 7em;
+	}
+}
 
 /************Animations**************/
 //Rotation Animation
@@ -303,3 +373,8 @@ section {
 	100% { transform: rotate(360deg); }
 }
 
+//Todo
+.todo {
+	color: red;
+	font-weight: bold;
+}

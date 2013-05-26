@@ -13,19 +13,82 @@
 		</header>
 
 		<div role="main">
-			<p class="intro">Pattern Lab is a collection of tools to help create and maintain robust web design systems.</p>
+			<p class="intro">Pattern Lab is a collection of tools to help create and maintain web design systems.</p>
 
 			<div class="btn-group">
 				<a href="#" target="_blank" class="btn">See It In Action</a>
-				<a href="#" target="_blank" class="btn">Download</a>
-				<a href="#" target="_blank" class="btn">On Github</a>
+				<a href="#" target="_blank" class="btn">View On Github</a>
 			</div>
+
 			<section id="what">
-				<h2>What</h2>
+				<h2>Atomic Design</h2>
+				<p>All matter, no matter how complex, can be broken down into molecules which can be broken down further into atomic elements. All web interfaces can be broken down down the same way.  Atomic Design provides a methodology for building an effective design system. It consists of five distint stages: atoms, molecules, organisms, templates and pages. </p>
+
+				<ol class="atomic-design">
+					<li class="atomic-atom">
+						<div class="icon atom"></div>
+						<h4 class="atomic-label">Atoms</h4>
+					</li>
+					<li class="atomic-molecule">
+						<div class="icon atom"></div>
+						<h4 class="atomic-label">Molecules</h4>
+					</li>
+					<li class="atomic-organism">
+						<div class="icon atom"></div>
+						<h4 class="atomic-label">Organisms</h4>
+					</li>
+					<li class="atomic-template">
+						<div class="icon atom"></div>
+						<h4 class="atomic-label">Templates</h4>
+					</li>
+					<li class="atomic-page">
+						<div class="icon atom"></div>
+						<h4 class="atomic-label">Pages</h4>
+					</li>
+				</ol>
+
+				<p>Here's a breakdown of each specific stage:</p>
+
+				<section class="section-icon">
+					<div class="icon atom"></div>
+					<h3>Atoms</h3>
+					<p>The atomic units of a design system are elements that can't be broken down any further without losing their meaning. Atoms naturally include global HTML elements, but can also <span class="todo">include</span>.</p>
+				</section>
+
+				<section class="section-icon">
+					<div class="icon atom"></div>
+					<h3>Molecules</h3>
+					<p>Molecules are combinations of atoms </p>
+				</section>
+				<section class="section-icon">
+					<div class="icon atom"></div>
+					<h3>Organisms</h3>
+					<p>
+						
+					</p>
+				</section>
+				<section class="section-icon">
+					<div class="icon atom"></div>
+					<h3>Templates</h3>
+					<p>Templates are page-level </p>
+				</section>
+				<section class="section-icon">
+					<div class="icon atom"></div>
+					<h3>Pages</h3>
+					<p>Pages are the final stage of the design system. They're specific instances of templates, complete with real content. Pages are</p>
+				</section>
+
+				
+
+				
+
+				
+				<h2>Pattern Lab</h2>
+				
 
 				<h3>What Pattern Lab Is</h3>
 				<ul>
-					<li><strong>A methodical component library</strong>&mdash;</li>
+					<li><strong>A comprehensive component library</strong>&mdash;Pattern Lab </li>
 					<li><strong>A pattern starter kit</strong>&mdash; Pattern Lab gives you the </li>
 					<li><strong>A Viewport Resizer</strong>&mdash;It's our jobs to make sure</li>
 					<li><strong>An Annotation Tool</strong>&mdash;Pattern Lab provides a way to annotate patterns</li>
@@ -60,76 +123,108 @@
 
 			<section id="who">
 			<h2>Who</h2>
-				<p>Pattern Lab benefits everyone involved in a web project. Clients and managers can use it as a way of keeping track of everything going on the site and as an educational resource. Visual designers can use it as a way to see how each module works in a responsive environment and also keep track of typefaces and other visual treatments. Developers can use it as a front-end code library and use it to test everything under one roof.</p>
+				<p>Pattern Lab benefits everyone involved in a web project. It can serve as a glue that holds a project together.</p>
+				<ul>
+					<li><strong>Information Architects</strong>&mdash;</li>
+					<li><strong>Visual Designers</strong>&mdash;Visual designers can use Pattern Lab as a way to see how each module works in a responsive environment and also keep track of typefaces and other visual treatments.</li>
+					<li><strong>Developers</strong>&mdash;Developers can use it as a front-end code library and use it to test everything under one roof.</li>
+					<li><strong></strong>&mdash;</li>
+					<li><strong>Clients and managers&mdash; can use it as a way of keeping track of everything going on the site and as an educational resource.</strong></li>
+				</ul>
 			</section>
 
 			<section id="how">
 				<h2>How</h2>
 				<p>The style guide's patterns live in sub-folders of the <code>patterns</code> directory. The index page dynamically pulls in all the patterns into one page. The styles are helped along with <a href="http://sass-lang.com/">Sass</a>, which allows the team to define variables and author more modular styles. </p>
+
+				<code>
+					&lt;php inc('molecule','pagination') ?&gt;
+				</code>
 			</section>
 
 			<section id="where">
 				<h2>Where</h2>
-				<p>The style guide should initially live in a sandbox environment accessible via a single URL. This ensures that everyone on the team has access to the style guide. Optionally (and ideally) the style guide may be published publicly like <a href="http://www.starbucks.com/static/reference/styleguide/">Starbucks</a>, <a href="http://www.bbc.co.uk/gel/mobile/device-considerations/philosophy">The BBC</a>, and <a href="http://pasteup.gu.com/">The Guardian</a> have done.</p>
+				<p>The style guide should initially live in a sandbox environment accessible via a URL. This ensures that everyone on the team has access to the style guide. Optionally (and ideally) the style guide may be published publicly like <a href="http://www.starbucks.com/static/reference/styleguide/">Starbucks</a>, <a href="http://www.bbc.co.uk/gel/mobile/device-considerations/philosophy">The BBC</a>, and <a href="http://pasteup.gu.com/">The Guardian</a> have done.</p>
 			</section>
 
 			<section id="roadmap">
 				<h2>Roadmap</h2>
 				<ul>
-					<li>Mustache for templates and extensibility. Separate data from view
-					<li>Use YML or JSON to store data
-					<li>Annotations
-					<li>Versioning
-					<li>Clicking through to other t	emplanes
-					<li>Pattern Lab Themes: E-commerce, blog, brochure-ware, etc...
+					<li>Mustache for templates and extensibility. Separate data from view</li>
+					<li>Use YML or JSON to store data</li>
+					<li>Annotations</li>
+					<li>Versioning</li>
+					<li>Clicking through to other t	emplanes</li>
+					<li>Pattern Lab Themes: E-commerce, blog, brochure-ware, etc...</li>
 				</ul>
 			</section>
 
 			<section id="resources">
 				<h2><a href="#resources">Resources</a></h2>
-				<h3>About</h3>
-				<ul>
-					<li><a href="http://24ways.org/2011/front-end-style-guides">Front-End Style Guides</a></li>
-					<li><a href="http://maban.co.uk/66"></a></li>
-					<li><a href="http://coding.smashingmagazine.com/2008/05/02/improving-code-readability-with-css-styleguides/">Improving Code Readability With CSS Styleguides</a></li>
-					<li><a href="http://www.slideshare.net/stephenhay/style-guides-are-the-new-photoshop-fronteers-2012">Style Guides are the new Photoshop</a></li>
-					<li><a href="http://blog.cloudfour.com/common-patterns/">Common Patterns in Styleguides, Boilerplates and Pattern Libraries</a>
-				</ul>
-
-				<h3>Custom Pattern Library Tools</h3>
-				<ul>
-					<li><a href="http://barebones.paulrobertlloyd.com/">Barebones</a></li>
-					<li><a href="http://patternprimer.adactio.com/">Pattern Primer</a></li>
-					<li><a href="http://pea.rs/">Pears</a></li>
-				</ul>
+				<div class="g-2up">
+					<div class="gi">
+						<h3>About</h3>
+						<ul>
+							<li><a href="http://24ways.org/2011/front-end-style-guides">Front-End Style Guides</a></li>
+							<li><a href="http://maban.co.uk/66"></a></li>
+							<li><a href="http://coding.smashingmagazine.com/2008/05/02/improving-code-readability-with-css-styleguides/">Improving Code Readability With CSS Styleguides</a></li>
+							<li><a href="http://www.slideshare.net/stephenhay/style-guides-are-the-new-photoshop-fronteers-2012">Style Guides are the new Photoshop</a></li>
+							<li><a href="http://blog.cloudfour.com/common-patterns/">Common Patterns in Styleguides, Boilerplates and Pattern Libraries</a>
+						</ul>
+					</div>
+					<div class="gi">
+						<h3>Custom Pattern Library Tools</h3>
+						<ul>
+							<li><a href="http://barebones.paulrobertlloyd.com/">Barebones</a></li>
+							<li><a href="http://patternprimer.adactio.com/">Pattern Primer</a></li>
+							<li><a href="http://pea.rs/">Pears</a></li>
+						</ul>
+					</div>
+					<div class="gi">
+						<h3>Pattern Library Tools</h3>
+						<ul>
+							<li><a href="http://bradfrost.github.com/this-is-responsive/patterns.html">Responsive Patterns</a></li>
+							<li><a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a></li>
+							<li><a href="http://foundation.zurb.com/">Foundation Zurb</a></li>
+							<li><a href="http://baselinecss.com/typography.html">Baseline</a></li>
+						</ul>
+					</div>
+					<div class="gi">
+						<h3>Pattern Librarys Examples</h3>
+						<ul>
+							<li><a href="https://gimmebar.com/collection/4ecd439c2f0aaad734000022/front-end-styleguides">Style Guide Resource Round-Up</a></li>
+							<li><a href="http://www.starbucks.com/static/reference/styleguide/">Starbucks Style Guide</a></li>
+							<li><a href="http://www.bbc.co.uk/gel/mobile/device-considerations/philosophy">BBC</a></li>
+							<li><a href="http://pasteup.gu.com/">The Guardian</a></li>
+							<li><a href="http://www.southtees.nhs.uk/style-guide/">South Tees Hospital</a></li>
+							<li><a href="http://paulrobertlloyd.com/about/styleguide/">Paul Robert Lloyd</a></li>
+						</ul>
+					</div>
+					<div class="gi">
+						<h3>Related Concepts/Tools</h3>
+						<ul>
+							<li><a href="joshduck.com/periodic-table.html">Periodic Table of HTML Elements</a></li>
+							<li><a href="http://styletil.es/">Style Tiles</a></li>
+							<li><a href="http://danielmall.com/articles/rif-element-collages/">Element Collages</a></li>
+							<li><a href=""></a></li>
+						</ul>
+					</div>
+					<div class="gi">
+						
+					</div>
 				
-				<h3>Pattern Library Tools</h3>
-				<ul>
-					<li><a href="http://bradfrost.github.com/this-is-responsive/patterns.html">Responsive Patterns</a></li>
-					<li><a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a></li>
-					<li><a href="http://foundation.zurb.com/">Foundation Zurb</a></li>
-					<li><a href="http://baselinecss.com/typography.html">Baseline</a></li>
-				</ul>
-				
-				<h3>Pattern Librarys Examples</h3>
-				<ul>
-					<li><a href="https://gimmebar.com/collection/4ecd439c2f0aaad734000022/front-end-styleguides">Style Guide Resource Round-Up</a></li>
-					<li><a href="http://www.starbucks.com/static/reference/styleguide/">Starbucks Style Guide</a></li>
-					<li><a href="http://www.bbc.co.uk/gel/mobile/device-considerations/philosophy">BBC</a></li>
-					<li><a href="http://pasteup.gu.com/">The Guardian</a></li>
-					<li><a href="http://www.southtees.nhs.uk/style-guide/">South Tees Hospital</a></li>
-					<li><a href="http://paulrobertlloyd.com/about/styleguide/">Paul Robert Lloyd</a></li>
-				</ul>
 
-				<h3>Related Concepts/Tools</h3>
-				<ul>
-					<li><a href="http://styletil.es/">Style Tiles</a></li>
-					<li><a href="http://danielmall.com/articles/rif-element-collages/">Element Collages</a></li>
-					<li><a href=""></a></li>
+				
+				
+				
+				
+				
+
+
 			</section>
 		</div>
 		<footer role="contentinfo">
-			<p>Created by <a href="http://bradfrostweb.com" rel="external">Brad Frost</a> (<a href="http://twitter.com/brad_frost" rel="external">@brad_frost</a>) with a ridiculous amount of help from <a href="#">Dave Olsen</a> (<a href="http://twitter.com/dmolsen">@dmolsen</a>).
+			<p>Created by <a href="http://bradfrostweb.com" rel="external">Brad Frost</a> (<a href="http://twitter.com/brad_frost" rel="external">@brad_frost</a>) with a ridiculous amount of help from <a href="#">Dave Olsen</a> (<a href="http://twitter.com/dmolsen">@dmolsen</a>). <a href="#">You can help too!</a>
 		</footer>
 	</div><!--end container-->
 </body>

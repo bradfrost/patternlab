@@ -74,7 +74,7 @@ input[type="search"]::-webkit-search-decoration {
 	}
 	
 	input[type=submit], button, .btn {
-		font-size: $font-slightly-smaller;
+		font-size: $font-size-slightly-smaller;
 		padding: 0.65rem 1.3rem;
 		background: $gray-dark;
 		position: absolute;
@@ -127,6 +127,13 @@ input[type="search"]::-webkit-search-decoration {
 	color: $valid;
 }
 
+input.error, textarea.error {
+	border-color: $error;
+}
+
+input.valid, textarea.valid {
+	border-color: $valid;
+}
 
 
 

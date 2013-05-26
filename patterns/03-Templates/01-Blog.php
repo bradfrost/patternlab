@@ -1,7 +1,10 @@
 <?php inc('organism','header'); ?>
 <div role="main">
-	<article class="article">
+	<div class="l-main">
 		
-	</article>
+	</div>
+	<div class="l-sidebar">
+		
+	</div>
 </div><!--End role=main-->
 <?php inc('organism','footer'); ?>

@@ -7,16 +7,6 @@
 	max-width: $max-width;	
 	margin: 0 auto;
 	padding: $pad-half;
-
-	&.flush {
-		padding-top: 0;
-		padding-bottom: 0;
-	}
-}
-
-.box {
-	padding: $pad-half;
-	margin-bottom: $space;
 }
 
 /*------------------------------------*\
@@ -51,101 +41,6 @@
 			padding-left: $pad;
 		}
 	}
-}
-
-/* Two Column Layout */
-.l-two-col-alt {
-	@extend .cf;
-
-	> .l-sidebar {
-		@media all and (max-width: $bp-large) {
-			clear: both;
-		}
-		
-		@media all and (min-width: $bp-large) {
-			float: left;
-			width: 15rem;
-			padding-left: $pad;
-		}
-	}
-	
-	.l-main {
-		@media all and (min-width: $bp-large) {
-			margin-left: 15rem;
-		}
-	}
-}
-
-/* Three Column Layout */
-.l-three-col {
-	@extend .cf;
-
-	> .l-main-container > .l-main {
-		@media all and (min-width: $bp-med) and (max-width: $bp-large) {
-			padding: 0 3rem;
-		}
-		
-		@media all and (min-width: $bp-large) {
-			margin-right: $l-sidebar-width;
-			padding-right: $pad;
-		}
-		
-		@media all and (min-width: $bp-xl) {
-			margin-left: 18%;
-			padding-left: $pad-double;
-		}
-	}
-	
-	/* Left Sidebar */
-	.l-sidebar-1 {
-		display: none; /* Initially hidden */
-		
-		@media all and (min-width: $bp-xl) {
-			display: block;
-			float: left;
-			width: 18%;
-			margin-left: -100%;
-		}
-	}
-	
-	.l-sidebar-2 {
-		@media all and (min-width: $bp-med) and (max-width: $bp-large) {
-			padding: 0 3rem;
-		}
-		
-		@media all and (max-width: $bp-large) {
-			clear: both;
-		}
-	
-		@media all and (min-width: $bp-large) {
-			float: left;
-			width: $l-sidebar-width;
-			margin-left: (-$l-sidebar-width);
-			padding-left: $pad;
-		}
-	}
-}
-
-.l-two-col-expose {
-	
-	> .l-main-container > .l-main {
-		@media all and (min-width: $bp-xl) {
-			margin-left: 18%;
-			padding-left: $pad-double;
-		}
-	}
-
-	> .l-sidebar {
-		display: none;
-
-		@media all and (min-width: $bp-xl) {
-			display: block;
-			float: left;
-			width: 18%;
-			margin-left: -100%;
-		}
-	}
-	
 }
 
 

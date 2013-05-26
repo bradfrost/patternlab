@@ -418,6 +418,25 @@ html, body {
     .demo .gi .gi:nth-of-type(2n), .demo .demo-block .gi:nth-of-type(2n) {
       background: rgba(0, 0, 0, 0.3); }
 
+.demo-animate {
+  background: #dddddd;
+  padding: 1em;
+  margin-bottom: 1em;
+  text-align: center; }
+
+.animate-move {
+  position: relative; }
+  .animate-move .demo-shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 20px;
+    background: gray; }
+  .animate-move:hover > .demo-shape {
+    left: 100%;
+    margin-left: -20px; }
+
 .sg-colors {
   overflow: hidden; }
   .sg-colors li {
