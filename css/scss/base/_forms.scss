@@ -118,22 +118,6 @@ input[type="search"]::-webkit-search-decoration {
 .is-valid {
 	border-color: $valid;
 }
-.error {
-	display: block;
-	color: $error;
-}
-.valid {
-	display: block;
-	color: $valid;
-}
-
-input.error, textarea.error {
-	border-color: $error;
-}
-
-input.valid, textarea.valid {
-	border-color: $valid;
-}
 
 
 

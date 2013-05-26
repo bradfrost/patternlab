@@ -114,15 +114,13 @@ header, footer, nav, section, article, hgroup, figure {
 /* Display Classes */
 .hide-small {
   display: none; }
-  @media all and (min-width: 46.8em) {
+  @media all and (min-width: 24em) {
     .hide-small {
       display: block; } }
 
-.hide-small-med {
-  display: none; }
-  @media all and (min-width: 60em) {
-    .hide-small-med {
-      display: block; } }
+@media all and (max-width: 24em) {
+  .hide-small-max {
+    display: none; } }
 
 @media all and (min-width: 46.8em) {
   .hide-med {
@@ -139,26 +137,6 @@ header, footer, nav, section, article, hgroup, figure {
 @media all and (max-width: 60em) {
   .hide-large-max {
     display: none; } }
-
-@media all and (min-width: 73em) {
-  .hide-xl {
-    display: none; } }
-
-.hide-small-large-show-medium {
-  display: none; }
-  @media all and (min-width: 46.8em) {
-    .hide-small-large-show-medium {
-      display: inline; } }
-  @media all and (min-width: 60em) {
-    .hide-small-large-show-medium {
-      display: none; } }
-
-@media all and (min-width: 46.8em) {
-  .hide-med-show-small-large {
-    display: none; } }
-@media all and (min-width: 60em) {
-  .hide-med-show-small-large {
-    display: block; } }
 
 body {
   background: white;
@@ -328,20 +306,6 @@ input[type="search"]::-webkit-search-decoration {
   border-color: red; }
 
 .is-valid {
-  border-color: #089e00; }
-
-.error {
-  display: block;
-  color: red; }
-
-.valid {
-  display: block;
-  color: #089e00; }
-
-input.error, textarea.error {
-  border-color: red; }
-
-input.valid, textarea.valid {
   border-color: #089e00; }
 
 /*------------------------------------*\

@@ -66,15 +66,14 @@
 /* Display Classes */
 .hide-small {
 	display: none;
-	@media all and (min-width: $bp-med) {
+	@media all and (min-width: $bp-small) {
 		display: block;
 	}
 }
 
-.hide-small-med {
-	display: none;
-	@media all and (min-width: $bp-large) {
-		display: block;	
+.hide-small-max {
+	@media all and (max-width: $bp-small) {
+		display: none;
 	}
 }
 
@@ -102,29 +101,3 @@
 		display: none;
 	}
 }
-
-.hide-xl {
-	@media all and (min-width: $bp-xl) {
-		display: none;
-	}
-}
-
-.hide-small-large-show-medium {
-	display: none;
-	@media all and (min-width: $bp-med) {
-		display: inline;
-	}
-	@media all and (min-width: $bp-large) {
-		display: none;
-	}
-}
-
-.hide-med-show-small-large {
-	@media all and (min-width: $bp-med) {
-		display: none;
-	}
-	@media all and (min-width: $bp-large) {
-		display: block;
-	}
-}
-

@@ -29,10 +29,10 @@
     </div>
     <div class="field-container">
         <label class="error">Error Input</label>
-        <input class="error" type="text" placeholder="Text Input">
+        <input class="is-error" type="text" placeholder="Text Input">
     </div>
     <div class="field-container">
         <label  class="valid">Valid</label>
-        <input  class="valid" type="text" placeholder="Text Input">
+        <input  class="is-valid" type="text" placeholder="Text Input">
     </div>
 </fieldset>
