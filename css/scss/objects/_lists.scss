@@ -18,15 +18,19 @@
 
 /* Headline List */
 .headline-list {
-	border-top: 1px solid $gray-light-3;
 	margin-bottom: $space;
 
 	&.flush {
 		margin: 0;
 	}
 
+	h4 {
+		font-weight: normal;
+	}
+
 	li {
-		border-bottom: 1px solid $gray-light-3;
+		padding: $pad-quarter 0;
+		border-top: 1px solid $gray-light-3;
 	}
 }
 

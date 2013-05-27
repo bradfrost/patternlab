@@ -391,7 +391,7 @@ td {
   .l-two-col .l-sidebar {
     float: left;
     width: 30%;
-    padding-left: 1rem; } }
+    padding: 1rem 0 0 1rem; } }
 
 /*------------------------------------*\
     $GRIDS
@@ -935,12 +935,14 @@ td {
 
 /* Headline List */
 .headline-list {
-  border-top: 1px solid #dddddd;
   margin-bottom: 1rem; }
   .headline-list.flush {
     margin: 0; }
+  .headline-list h4 {
+    font-weight: normal; }
   .headline-list li {
-    border-bottom: 1px solid #dddddd; }
+    padding: 0.25rem 0;
+    border-top: 1px solid #dddddd; }
 
 /* Bullet List */
 .bullet-list {
@@ -1032,42 +1034,11 @@ td {
       background: #333333;
       color: white; }
 
-/* Horizontal Carousel */
-.carousel-horizontal {
-  margin-bottom: 1rem;
-  overflow: hidden;
-  position: relative; }
+.section {
+  margin: 0 0 1rem; }
 
-.carousel-island-container {
-  overflow: hidden; }
-
-.carousel-container {
-  position: relative; }
-
-.carousel-controls {
-  display: table;
-  width: 100%;
-  margin: -0.5rem 0 1rem; }
-  .carousel-controls a, .carousel-controls div {
-    display: table-cell;
-    padding: 0.5rem; }
-  .carousel-controls .carousel-pagination {
-    text-align: center; }
-  .carousel-controls .carousel-next {
-    text-align: right; }
-
-.slideshow {
-  margin-bottom: 1rem; }
-
-.sideshow-nav {
-  overflow: hidden; }
-  .sideshow-nav li {
-    float: left;
-    max-width: 8em;
-    margin-right: 0.5rem; }
-
-.article {
-  padding: 0.5rem; }
+.section-title {
+  margin-bottom: 0.5rem; }
 
 .article-header h1 {
   font-size: 2.5em; }
@@ -1081,10 +1052,44 @@ td {
 .wp-caption-text {
   font-style: italic; }
 
-/* Review Summary */
 .review-summary .grade {
   width: 4.5em;
   float: left;
   margin: 0 0.5rem 0 0; }
 .review-summary .summary-text {
   margin-left: 5em; }
+
+.social-share {
+  overflow: hidden;
+  margin-bottom: 1rem; }
+  .social-share li {
+    float: left;
+    margin-right: 0.25rem; }
+  .social-share a {
+    background: #333333;
+    color: white;
+    display: block;
+    padding: 0.5rem; }
+    .social-share a:hover {
+      background: gray; }
+
+.comments li {
+  margin-bottom: 1rem; }
+
+.comment-container {
+  overflow: hidden;
+  margin-bottom: 1rem; }
+
+.comment-meta {
+  float: left;
+  width: 6.5em; }
+  .comment-meta img {
+    display: block;
+    border: 1px solid #eeeeee;
+    margin-bottom: 0.5rem; }
+
+.comment-name {
+  font-size: 0.75em; }
+
+.comment-text {
+  margin-left: 9em; }

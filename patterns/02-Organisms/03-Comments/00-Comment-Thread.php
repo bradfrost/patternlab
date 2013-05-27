@@ -11,5 +11,5 @@
 			<?php inc('molecule','single-comment'); ?>
 		</div>
 	</div>
-	<a href="#" class="btn">Load more comments...</a>
+	<?php inc('molecule','pagination') ?>
 </section>
