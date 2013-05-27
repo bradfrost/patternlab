@@ -1,6 +1,6 @@
 <form action="#" method="post" class="inline-form search-form">           
     <fieldset>
-	    <legend>Search</legend>
+	    <legend class="is-vishidden">Search</legend>
 	    <label for="search-field" class="is-vishidden">Search</label>
 	    <input type="search" placeholder="Search" id="search-field" class="search-field" />
 	    <button class="search-submit">

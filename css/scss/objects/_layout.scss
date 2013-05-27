@@ -12,32 +12,27 @@
 /*------------------------------------*\
     $TEMPLATES
 \*------------------------------------*/
-/* Main Column Container */
-.l-main-container {
-	float: left;
-	width: 100%;
-}
 
 /* Two Column Layout */
 .l-two-col {
 	@extend .cf;
 
-	> .l-main-container > .l-main {
+	.l-main {
 		@media all and (min-width: $bp-large) {
-			margin-right: $l-sidebar-width;
+			float: left;
+			width: 70%;
 			padding-right: $pad;
 		}
 	}
 	
-	> .l-sidebar {
+	.l-sidebar {
 		@media all and (max-width: $bp-large) {
 			clear: both;
 		}
 
 		@media all and (min-width: $bp-large) {
 			float: left;
-			width: $l-sidebar-width;
-			margin-left: (-$l-sidebar-width);
+			width: 30%;
 			padding-left: $pad;
 		}
 	}

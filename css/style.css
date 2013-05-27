@@ -112,13 +112,11 @@ header, footer, nav, section, article, hgroup, figure {
   text-transform: uppercase; }
 
 /* Display Classes */
-.hide-small {
-  display: none; }
-  @media all and (min-width: 24em) {
-    .hide-small {
-      display: block; } }
-
 @media all and (max-width: 24em) {
+  .hide-small {
+    display: none; } }
+
+@media all and (min-width: 24em) {
   .hide-small-max {
     display: none; } }
 
@@ -130,11 +128,11 @@ header, footer, nav, section, article, hgroup, figure {
   .hide-med-max {
     display: none; } }
 
-@media all and (min-width: 60em) {
+@media all and (min-width: 52em) {
   .hide-large {
     display: none; } }
 
-@media all and (max-width: 60em) {
+@media all and (max-width: 52em) {
   .hide-large-max {
     display: none; } }
 
@@ -154,6 +152,15 @@ a {
 
 /* Headings */
 /*Further Reading: http:/csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/ */
+h1, .alpha {
+  line-height: 1.2; }
+
+h2, .beta {
+  line-height: 1.2; }
+
+h3, .gamma {
+  line-height: 1.2; }
+
 /* Subheadings */
 .subheading {
   font-family: Georgia, Times, "Times New Roman", serif;
@@ -371,24 +378,19 @@ td {
 /*------------------------------------*\
     $TEMPLATES
 \*------------------------------------*/
-/* Main Column Container */
-.l-main-container {
-  float: left;
-  width: 100%; }
-
 /* Two Column Layout */
-@media all and (min-width: 60em) {
-  .l-two-col > .l-main-container > .l-main {
-    margin-right: 19.75rem;
-    padding-right: 1rem; } }
-@media all and (max-width: 60em) {
-  .l-two-col > .l-sidebar {
-    clear: both; } }
-@media all and (min-width: 60em) {
-  .l-two-col > .l-sidebar {
+@media all and (min-width: 52em) {
+  .l-two-col .l-main {
     float: left;
-    width: 19.75rem;
-    margin-left: -19.75rem;
+    width: 70%;
+    padding-right: 1rem; } }
+@media all and (max-width: 52em) {
+  .l-two-col .l-sidebar {
+    clear: both; } }
+@media all and (min-width: 52em) {
+  .l-two-col .l-sidebar {
+    float: left;
+    width: 30%;
     padding-left: 1rem; } }
 
 /*------------------------------------*\
@@ -434,7 +436,7 @@ td {
     width: 50%; }
     .g-3up > .gi:nth-of-type(2n+1) {
       clear: left; } }
-@media all and (min-width: 60em) {
+@media all and (min-width: 52em) {
   .g-3up > .gi {
     width: 33.3333333%; }
     .g-3up > .gi:nth-of-type(2n+1) {
@@ -449,7 +451,7 @@ td {
     width: 50%; }
     .g-4up > .gi:nth-of-type(2n+1) {
       clear: both; } }
-@media all and (min-width: 60em) {
+@media all and (min-width: 52em) {
   .g-4up > .gi {
     width: 25%; }
     .g-4up > .gi:nth-of-type(2n+1) {
@@ -477,7 +479,7 @@ td {
       clear: none; }
     .g-max4 > .gi:nth-of-type(3n+1) {
       clear: left; } }
-@media all and (min-width: 60em) {
+@media all and (min-width: 52em) {
   .g-max4 > .gi {
     width: 25%; }
     .g-max4 > .gi:nth-of-type(3n+1) {
@@ -538,16 +540,14 @@ td {
   background: white;
   padding: 0;
   border-bottom: 1px solid #dbdbdb; }
-  .header .search-form {
-    overflow: hidden;
-    max-height: 0; }
-    .header .search-form.active {
-      max-height: 8em; }
 
 .logo {
   float: left;
   max-width: 8rem;
   margin: 0.4rem; }
+  @media all and (min-width: 46.8em) {
+    .logo {
+      max-width: 9rem; } }
 
 .nav-toggle {
   float: right;
@@ -560,17 +560,37 @@ td {
     .nav-toggle {
       display: none; } }
 
+.search-form {
+  overflow: hidden;
+  max-height: 0; }
+  @media all and (min-width: 46.8em) {
+    .search-form {
+      float: right;
+      max-height: none;
+      margin: 0.65em 0.5em 0 0; } }
+
 /*------------------------------------*\
     $NAVIGATION
 \*------------------------------------*/
 .nav {
-  clear: both; }
+  clear: both;
+  overflow: hidden;
+  max-height: 0; }
   .nav a {
     display: block;
     padding: 1rem;
     border-top: 1px solid #eeeeee; }
   .nav.active {
     max-height: 40em; }
+  @media all and (min-width: 46.8em) {
+    .nav {
+      max-height: none;
+      float: right;
+      clear: none; }
+      .nav li {
+        float: left; }
+      .nav a {
+        border: 0; } }
 
 .pagination {
   overflow: hidden; }
@@ -586,7 +606,7 @@ td {
     $MAIN CONTENT AREA
 \*------------------------------------*/
 [role=main] {
-  padding: 0;
+  padding: 0.5rem 0.5rem 2rem;
   overflow: hidden; }
 
 /*------------------------------------*\
@@ -602,6 +622,22 @@ td {
     padding: 1rem 1rem 0; }
   .footer a {
     color: #f9f9f9; }
+
+.nav-footer {
+  margin: -1rem -1rem 1rem; }
+  .nav-footer li {
+    border-bottom: 1px solid #333333; }
+    @media all and (min-width: 46.8em) {
+      .nav-footer li {
+        border: 0;
+        float: left; } }
+  .nav-footer a {
+    display: block;
+    padding: 1rem; }
+
+@media all and (min-width: 46.8em) {
+  .copyright {
+    float: right; } }
 
 /*------------------------------------*\
     $TEXT Styles
@@ -622,10 +658,14 @@ td {
   text-decoration: underline; }
 .text ul {
   list-style: disc;
-  margin-left: 1.2em; }
+  margin: 0 0 1rem 1.2em; }
+  .text ul ul {
+    margin-bottom: 0; }
 .text ol {
   list-style: decimal;
-  margin-left: 1.2em; }
+  margin-left: 0 0 1rem 1.2em; }
+  .text ol ol {
+    margin-bottom: 0; }
 
 /* Review Grade Tile */
 .grade {
@@ -818,9 +858,25 @@ td {
   .block p:last-child {
     margin-bottom: 0; }
 
+.headline {
+  line-height: 1.2; }
+
 /* Hero Block */
-.block-hero .b-thumb img {
-  display: block; }
+.block-hero {
+  margin-bottom: 0.5rem; }
+  .block-hero .b-thumb img {
+    display: block; }
+  @media all and (min-width: 52em) {
+    .block-hero {
+      position: relative; }
+      .block-hero .b-text {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 0.5rem; } }
 
 /* Block Thumbnail with Headline */
 .block-thumb {
@@ -857,15 +913,8 @@ td {
     position: relative;
     z-index: 0; }
     .block-inset .b-thumb img {
-      display: block; }
-  .block-inset .b-text {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 0.5rem; }
+      display: block;
+      margin-bottom: 0.5rem; }
 
 /* Block Thumb with Summary */
 .block-thumb-summary .b-thumb {
@@ -1019,6 +1068,9 @@ td {
 
 .article {
   padding: 0.5rem; }
+
+.article-header h1 {
+  font-size: 2.5em; }
 
 .byline {
   font-size: 0.875em;

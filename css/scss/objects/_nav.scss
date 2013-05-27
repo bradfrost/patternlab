@@ -4,6 +4,8 @@
 
 .nav {
 	clear: both;
+	overflow: hidden;
+	max-height: 0;
 	
 	a {
 		display: block;
@@ -13,6 +15,21 @@
 
 	&.active {
 		max-height: 40em;
+	}
+
+	@media all and (min-width: $bp-med) {
+		max-height: none;
+		float: right;
+		clear: none;
+
+		li {
+			float: left;
+		}
+
+		a {
+			border: 0;
+		}
+		
 	}
 }
 

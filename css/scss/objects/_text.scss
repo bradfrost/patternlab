@@ -23,12 +23,20 @@
 
 	ul {
 		list-style: disc;
-		margin-left: 1.2em;
+		margin: 0 0 $space 1.2em;
+
+		ul {
+			margin-bottom: 0;
+		}
 	}
 
 	ol {
 		list-style: decimal;
-		margin-left: 1.2em;
+		margin-left: 0 0 $space 1.2em;
+
+		ol {
+			margin-bottom: 0;
+		}
 	}
 }
 

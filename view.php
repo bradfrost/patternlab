@@ -19,6 +19,5 @@
 		$url = $_GET["url"];
 		include	$patternsPath.$url;
 	?>
-	<script src="/styleguide/js/annotations-pattern.js"></script>
 </body>
 </html>

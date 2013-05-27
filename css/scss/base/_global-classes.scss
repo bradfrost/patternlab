@@ -65,18 +65,16 @@
 
 /* Display Classes */
 .hide-small {
-	display: none;
-	@media all and (min-width: $bp-small) {
-		display: block;
-	}
-}
-
-.hide-small-max {
 	@media all and (max-width: $bp-small) {
 		display: none;
 	}
 }
 
+.hide-small-max {
+	@media all and (min-width: $bp-small) {
+		display: none;
+	}
+}
 
 .hide-med {
 	@media all and (min-width: $bp-med) {

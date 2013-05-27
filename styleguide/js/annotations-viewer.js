@@ -4,15 +4,15 @@
 		sw = document.documentElement.clientWidth,
 		breakpoint = 650; 
 	
-	$(document).ready(function() {
-		$('body').addClass('comments-ready').append('<div id="comment-link"><a href="#">Annotations: <strong>OFF</strong></a></div>').delegate('#comment-link', 'click', function(){
-			toggleComments();
-			return false;
-		});
+	// $(document).ready(function() {
+	// 	$('body').addClass('comments-ready').append('<div id="comment-link"><a href="#">Annotations: <strong>OFF</strong></a></div>').delegate('#comment-link', 'click', function(){
+	// 		toggleComments();
+	// 		return false;
+	// 	});
 		
-		commentContainerInit();
+	// 	commentContainerInit();
 		
-	});
+	// });
 	
 	function toggleComments() {
 		if (!commentsActive) {

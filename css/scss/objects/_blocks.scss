@@ -16,11 +16,31 @@
 	}
 }
 
+.headline {
+	line-height: 1.2;
+}
+
 /* Hero Block */
 .block-hero {
+	margin-bottom: $space-half;
+
 	.b-thumb {
 		img {
 			display: block;
+		}
+	}
+
+	@media all and (min-width: $bp-large) {
+		position: relative;
+
+		.b-text {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			background: $dim;
+			color: $white;
+			padding: $pad-half;
 		}
 	}
 }
@@ -76,18 +96,11 @@
 
 		img {
 			display: block;
+			margin-bottom: $space-half;
 		}
 	}
 
-	.b-text {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		background: $dim;
-		color: $white;
-		padding: $pad-half;
-	}
+	
 }
 
 /* Block Thumb with Summary */

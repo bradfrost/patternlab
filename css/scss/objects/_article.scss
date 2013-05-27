@@ -2,6 +2,12 @@
 	padding: $pad-half;
 }
 
+.article-header {
+	h1 {
+		font-size: 2.5em;
+	}
+}
+
 .byline {
 	font-size: $font-size-slightly-smaller;
 	font-style: italic;

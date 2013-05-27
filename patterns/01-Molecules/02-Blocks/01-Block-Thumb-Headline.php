@@ -4,7 +4,7 @@
 			<?php inc('atom','square') ?>
 		</div>
 		<div class="b-text">
-			<h2 class="headline">Headline: Lorem Ipsum Dolor Amet Sit</h2>
+			<h2 class="headline">Headline: Lorem ipsum dolor sit amet, consectetur adipisicing</h2>
 		</div>
 	</a>
 </div>
