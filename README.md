@@ -1,33 +1,9 @@
 Pattern Lab
 ==
-Making pattern libraries using Atomic Design
+Pattern Lab is a collection of tools to help create and maintain atomic web design systems.
 
-## Why 
+## Atomic Design
+All matter, no matter how complex, can be broken down into molecules which can be broken down further into atomic elements. All web interfaces can be broken down down the same way.  Atomic Design provides a methodology for building an effective design system. It consists of five distint stages: atoms, molecules, organisms, templates and pages.
 
-## What 
-
-## Who
-
-## Where
-
-## How
-
-## General Principles
-- Agnostic - not a PHP solution. Not a Hammer solution. 
-- Reduce dependencies as much as possible
-- Strive to be as inclusive as possible
-- Strive to be useful for many audiences (clients, designers, developers, content owners)
-- What is built now is not final
-
-## Front-facing 
-- When should a new pattern be created?
-
-## Roadmap
-- Mustache for templates and extensibility. Separate data from view
-- Use YML or JSON to store data
-- Annotations
-- Versioning
-- Clicking through to other t	emplanes
-- Pattern Lab Themes: E-commerce, blog, brochure-ware, etc...
-
-Pattern Lab consists of a Builder and Viewer (isn, view modes, and project-specific data)
+## Pattern Lab
+More documentation coming very soon. In the meantime, check out [these notes](http://jancbeck.com/articles/btconf-brad-frost/).
