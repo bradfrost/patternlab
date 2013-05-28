@@ -133,23 +133,23 @@
 	});
 
 	//Set Manual Pixel Contenteditable region 
-	$('.sg-size-px').change(function(e) {
+	$('.sg-size-px').on("keydown", function(e){
 		var val = $(this).val();
 
 		console.log('poop');
 
-	    //if(e.keyCode == 13) { //If the Enter key is hit
-	    //	e.preventDefault();
+	    if(e.keyCode == 13) { //If the Enter key is hit
+	    	e.preventDefault();
 			sizeiframe(Math.floor(val)); //Size Iframe to value of text box
 			updateEmSizeReading(val);
 			$(this).blur();
-	    //} else { //If any other character is entered
-	    //	
-	    //}
+	    } else { //If any other character is entered
+	    
+	    }
 	});
 
 	//Set Manual 
-	$('.sg-size-em').change(function(e) {
+	$('.sg-size-em').on("keydown", function(e){
 		var val = $(this).val();
 		var bodySize = parseInt($('body').css('font-size'));
 

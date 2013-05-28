@@ -40,7 +40,7 @@
 			width: 100%;
 			background: $dim;
 			color: $white;
-			padding: $pad-half;
+			padding: $pad-and-half;
 		}
 	}
 }
@@ -58,22 +58,26 @@
 	}
 
 	.b-thumb {
-		display: table-cell;
-		vertical-align: top;	
-  		width: 30%;
-  		max-width: 10em;
+		@media all and (min-width: $bp-small-2) {
+			display: table-cell;
+			vertical-align: top;	
+	  		width: 30%;
+	  		max-width: 10em;
 
- 		img {
- 			display: block;
-			  width: 100%;
-			  height: auto;
+	 		img {
+	 			display: block;
+				  width: 100%;
+				  height: auto;
+	 		}
  		}
 	}
 
 	.b-text {
-		display: table-cell;
-		width: 70%;
-		padding: 0 $pad-half;
+		@media all and (min-width: $bp-small-2) {
+			display: table-cell;
+			width: 70%;
+			padding: 0 $pad;
+		}
 	}
 }
 

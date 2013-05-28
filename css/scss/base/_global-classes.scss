@@ -61,8 +61,6 @@
 	text-align: left;
 }
 
-.uppercase { text-transform: uppercase; }
-
 /* Display Classes */
 .hide-small {
 	@media all and (max-width: $bp-small) {
@@ -99,3 +97,18 @@
 		display: none;
 	}
 }
+
+//
+.valid {
+	color: $valid;
+}
+
+.error {
+	color: $error;
+}
+
+.info {
+
+}
+
+
