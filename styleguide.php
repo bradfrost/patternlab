@@ -40,7 +40,7 @@ function displayPatterns($dir,$exclude){
 	            if(is_dir($dir.'/'.$ff)){ /*If main section */
 	            	echo '<div class="sg-section" id="'.$fName.'">';
 	            } else { /* If SubItem */
-	           		//if(strlen(strstr($ff, '.', true)) < 1) continue; //Continue if hidden file
+	           		if(strlen(strstr($ff, '.', true)) < 1) continue; //Continue if hidden file
 	           		echo '<h2 class="sg-head sg-sub" id="'.$fName.'"><a href="'.$absolutePath.'?url='.$pathToFile.'/'.$ff.'" class="sg-pop">'.$fCaps.'</a></h2>';
 			    	echo '<div class="sg-pattern">';
 			    	include $dir.'/'.$ff;
@@ -48,19 +48,18 @@ function displayPatterns($dir,$exclude){
 	            } 
 	            
 	            if(is_dir($dir.'/'.$ff)) {
-	            	if($ff!='03-Pages') {
+	            	if($ff!='03-Templates' || $ff!='04-Pages') { //Exclude displaying the templates 
 	            		displayPatterns($dir.'/'.$ff,$exclude);
 	            	}
 	            }
             	
             	if(is_dir($dir.'/'.$ff)){ /*If main section */
-            		echo '</div>';
+                    echo '</div>';
             		echo '<!-====================================================================================================-->';
             	}
             } 
         } 
     } 
-    echo '</li>'; 
 } 
 
 displayPatterns($patternsPath,array('index.php')); 

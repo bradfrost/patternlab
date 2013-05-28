@@ -40,7 +40,7 @@
 				            if(is_dir($dir.'/'.$ff)){ /*If main section */
 				            	echo '<li class="sg-nav-'.$fCaps.'"><a href="?url='.$pathToFile.'/'.$ff.'" class="sg-acc-handle">'.$fCaps.'</a><ol class="sg-acc-panel">'; 
 				            } else { /* If SubItem */
-				            	//if(strlen(strstr($ff, '.', true)) < 1) continue; //Continue if hidden file
+				            	if(strlen(strstr($ff, '.', true)) < 1) continue; //Continue if hidden file
 				           		echo '<li><a href="?url='.$pathToFile.'/'.$ff.'" class="sg-pop">'.$fCaps.'</a></li>';
 				            } 
 				            
@@ -76,27 +76,6 @@
 							</ul>
 						</li>
 						<li class="sg-size">
-							<style>
-								#sg-form {
-									margin: 0;
-									border: 0;
-									padding: 0;
-								}
-								.sg-input {
-									margin: -2px 0 0 0;
-									padding: 0;
-									border: 1px solid #222;
-									background-color: #222;
-									color: gray;
-									width: 35px;
-									text-align: right;
-								}
-								
-								.sg-input-active {
-									background-color: #fff;
-									color: #000;
-								} 
-							</style>
 							<div class="sg-current-size"><form id="sg-form">Size <input type="text" class="sg-input sg-size-px" value="320">px / <input type="text" class="sg-input sg-size-em" value="20">em</form></div>
 							<ul class="sg-acc-panel sg-size-options">
 								<li class="sg-quarter"><a href="#" id="sg-size-s">S</a></li> 

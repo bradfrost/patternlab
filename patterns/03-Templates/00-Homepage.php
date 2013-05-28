@@ -17,11 +17,11 @@
 
 	<div class="l-two-col">
 		<div class="l-main">
-			Main
+			<?php inc('organism','latest-posts') ?>
 		</div>
 
 		<div class="l-sidebar">
-			sidebar
+			<?php inc('organism','recent-tweets') ?>
 		</div>
 	</div>
 	

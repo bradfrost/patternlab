@@ -380,6 +380,26 @@ body:after {
 	}
 }
 
+#sg-form {
+	margin: 0;
+	border: 0;
+	padding: 0;
+}
+.sg-input {
+	margin: -2px 0 0 0;
+	padding: 0;
+	border: 1px solid #222;
+	background-color: #222;
+	color: gray;
+	width: 35px;
+	text-align: right;
+}
+
+.sg-input-active {
+	background-color: #fff;
+	color: #000;
+}
+
 .sg-view {
 	position: relative;
 

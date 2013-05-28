@@ -4,7 +4,7 @@
 			<?php inc('atom','landscape') ?>
 		</div>
 		<div class="b-text">
-			<h2 class="headline">Headline (&lt;45 characters): Lorem ipsum dolor sit amet, consectetur adipisicing</h2>
+			<h2 class="headline">Headline: Lorem ipsum dolor sit amet, consectetur adipisicing</h2>
 		</div>
 	</a>
 </div>

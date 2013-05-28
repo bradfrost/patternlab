@@ -136,6 +136,8 @@
 	$('.sg-size-px').change(function(e) {
 		var val = $(this).val();
 
+		console.log('poop');
+
 	    //if(e.keyCode == 13) { //If the Enter key is hit
 	    //	e.preventDefault();
 			sizeiframe(Math.floor(val)); //Size Iframe to value of text box
@@ -231,7 +233,7 @@
 		$vp.find('.sg-head a').on("click", function(e){
 			e.preventDefault();
 			var thisHref = $(this).attr('href');
-			//window.location = thisHref;
+			window.location = thisHref;
 		});
 	});
 	

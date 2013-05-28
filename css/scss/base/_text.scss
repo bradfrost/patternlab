@@ -15,13 +15,9 @@ blockquote {
 /* Horizontal Rule */ 
 hr {
 	border: 0;
-    height: $border-med;
-    background: $gray;
+    height: 2px;
+    background: $gray-light-2;
     margin: $space-double 0;
-}
-
-small {
-
 }
 
 abbr {

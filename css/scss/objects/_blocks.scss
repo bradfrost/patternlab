@@ -53,12 +53,13 @@
 
 	.b-inner {
 		display: table-row;
+		vertical-align: top;
   		overflow: hidden;
 	}
 
 	.b-thumb {
 		display: table-cell;
-  		vertical-align: middle;
+		vertical-align: top;	
   		width: 30%;
   		max-width: 10em;
 
@@ -71,7 +72,6 @@
 
 	.b-text {
 		display: table-cell;
-		vertical-align: middle;
 		width: 70%;
 		padding: 0 $pad-half;
 	}
