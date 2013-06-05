@@ -54,7 +54,7 @@ html, body {
   padding: 0;
   -webkit-text-size-adjust: 100%; }
 
-body {
+body.sg-nav-wrapper {
   overflow: hidden; }
 
 @media all and (min-width: 65em) {

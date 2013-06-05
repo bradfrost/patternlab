@@ -14,7 +14,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="styleguide/js/jquery.js"><\/script>')</script>
 </head>
-<body>
+<body class="sg-nav-wrapper">
 <!--Style Guide Header-->
 <header class="sg-header" role="banner">
 	<a href="#sg-nav-container" class="sg-nav-toggle">Menu</a>
