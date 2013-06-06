@@ -14,7 +14,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="styleguide/js/jquery.js"><\/script>')</script>
 </head>
-<body>
+<body class="sg-nav-wrapper">
 <!--Style Guide Header-->
 <header class="sg-header" role="banner">
 	<a href="#sg-nav-container" class="sg-nav-toggle">Menu</a>
@@ -40,8 +40,9 @@
 				            if(is_dir($dir.'/'.$ff)){ /*If main section */
 				            	echo '<li class="sg-nav-'.$fCaps.'"><a href="?url='.$pathToFile.'/'.$ff.'" class="sg-acc-handle">'.$fCaps.'</a><ol class="sg-acc-panel">'; 
 				            } else { /* If SubItem */
-				            	//if(strlen(strstr($ff, '.', true)) < 1) continue; //Continue if hidden file
-				           		echo '<li><a href="?url='.$pathToFile.'/'.$ff.'" class="sg-pop">'.$fCaps.'</a></li>';
+				            	if(pathinfo($ff,PATHINFO_EXTENSION) == 'php') { //Skip non-PHP files
+					           		echo '<li><a href="?url='.$pathToFile.'/'.$ff.'" class="sg-pop">'.$fCaps.'</a></li>';
+					           	}
 				            } 
 				            
 				            if(is_dir($dir.'/'.$ff)) {
