@@ -40,8 +40,9 @@
 				            if(is_dir($dir.'/'.$ff)){ /*If main section */
 				            	echo '<li class="sg-nav-'.$fCaps.'"><a href="?url='.$pathToFile.'/'.$ff.'" class="sg-acc-handle">'.$fCaps.'</a><ol class="sg-acc-panel">'; 
 				            } else { /* If SubItem */
-				            	//if(strlen(strstr($ff, '.', true)) < 1) continue; //Continue if hidden file
-				           		echo '<li><a href="?url='.$pathToFile.'/'.$ff.'" class="sg-pop">'.$fCaps.'</a></li>';
+				            	if(pathinfo($ff,PATHINFO_EXTENSION) == 'php') { //Skip non-PHP files
+					           		echo '<li><a href="?url='.$pathToFile.'/'.$ff.'" class="sg-pop">'.$fCaps.'</a></li>';
+					           	}
 				            } 
 				            
 				            if(is_dir($dir.'/'.$ff)) {
