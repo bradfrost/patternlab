@@ -1019,7 +1019,7 @@ td {
     background: #333333; }
   .acc-handle.active {
     background: #333333; }
-    .acc-handle.active a:after {
+    .acc-handle.active:after {
       content: "-"; }
 
 .tabs {
