@@ -48,8 +48,11 @@ function displayPatterns($dir,$exclude){
 	            	}
 	            } 
 	            
-	            if(is_dir($dir.'/'.$ff)) {
-	            	if($ff!='03-Templates' || $ff!='04-Pages') { //Exclude displaying the templates 
+            	if(is_dir($dir.'/'.$ff)) {
+	            	if(!in_array($ff, array(
+	            		'03-Templates',
+	            		'04-Pages'
+	            	))) { //Exclude displaying the templates 
 	            		displayPatterns($dir.'/'.$ff,$exclude);
 	            	}
 	            }
