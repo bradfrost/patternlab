@@ -17,6 +17,31 @@ Name: the name of the file
 	
 ************** */
 
+
+/**
+ * Provide a filter for excluding hidden .git or .svn folders from the inc() function
+ */
+class ExcludeFilter extends RecursiveFilterIterator {
+	
+	public static $FILTERS = array(
+		'.svn',
+		'.git'	
+	);
+	
+	public function accept() {
+		//Check if a file is within one of the folders listed in the exclude list
+		foreach(self::$FILTERS as $filter) {
+			if(strpos($this->current()->getPath(),$filter)) {
+				return false;
+			}
+		}
+		return true;
+	}
+}
+
+
+
+
 function inc($type,$name) {
 	global $patternsPath; 
 	global $absolutePath;
@@ -38,7 +63,7 @@ function inc($type,$name) {
 	
 	
 	//Iterate over the appropriate path
-	$objects = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($filePath));
+	$objects = new RecursiveIteratorIterator(new ExcludeFilter(new RecursiveDirectoryIterator($filePath)));
 	foreach($objects as $objName => $object){
 	
 		$pos = stripos($objName, $name);
