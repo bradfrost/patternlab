@@ -63,13 +63,13 @@
 
 /* Display Classes */
 .hide-small {
-	@media all and (max-width: $bp-small) {
+	@media all and (min-width: $bp-small) {
 		display: none;
 	}
 }
 
 .hide-small-max {
-	@media all and (min-width: $bp-small) {
+	@media all and (max-width: $bp-small) {
 		display: none;
 	}
 }
