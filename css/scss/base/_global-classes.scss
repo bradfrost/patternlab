@@ -63,39 +63,21 @@
 
 /* Display Classes */
 .hide-small {
-	@media all and (min-width: $bp-small) {
-		display: none;
-	}
-}
-
-.hide-small-max {
-	@media all and (max-width: $bp-small) {
-		display: none;
-	}
+    @media all and (max-width: $bp-med) {
+        display: none;
+    }
 }
 
 .hide-med {
-	@media all and (min-width: $bp-med) {
-		display: none; 
-	}
-}
-
-.hide-med-max {
-	@media all and (max-width: $bp-med) {
-		display: none;
-	}
+    @media all and (min-width: $bp-med) and (max-width: $bp-large) {
+        display: none;
+    }
 }
 
 .hide-large {
-	@media all and (min-width: $bp-large) {
-		display: none;
-	}
-}
-
-.hide-large-max {
-	@media all and (max-width: $bp-large) {
-		display: none;
-	}
+    @media all and (min-width: $bp-large) {
+        display: none;
+    }
 }
 
 //
