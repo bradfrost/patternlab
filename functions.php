@@ -6,6 +6,7 @@ $root = $_SERVER['DOCUMENT_ROOT'];
 $absolutePath = '/';
 
 $patternsPath = $root.$absolutePath.'patterns/';
+$sassPath = $root.$absolutePath.'css/scss/';
 
 /************** 
 Include Function 

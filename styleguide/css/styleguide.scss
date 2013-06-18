@@ -281,6 +281,14 @@ body:after {
 	.sg-acc-panel.active {
 		max-height: 17em;
 	}
+	
+	.sg-nav-phases .sg-acc-panel {
+	  min-width: 0;
+	  
+	  &.active {
+	  max-height: none;
+	  }
+	}
 }
 
 .sg-control-trigger {
