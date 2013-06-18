@@ -67,6 +67,42 @@
 		<div class="sg-controls" id="sg-controls">
 				<div class="sg-control-content">
 					<ul class="sg-control">
+						<li class="sg-nav-phases">
+							<a href="#" class="sg-acc-handle">Phases</a>
+							<ul class="sg-acc-panel">
+								<?php 
+								/* Loop through SASS/SCSS files to find Phases */	
+								
+								function rglob($pattern='*', $flags = 0, $path='')
+								{
+								    $paths=glob($path.'*', GLOB_MARK|GLOB_ONLYDIR|GLOB_NOSORT);
+								    $files=glob($path.$pattern, $flags);
+								    foreach ($paths as $path) { $files=array_merge($files,rglob($pattern, $flags, $path)); }
+								    return $files;
+								}
+								
+								function listSassVariables($dir){
+									$ffs = rglob('*.{sass,scss}', GLOB_BRACE, $dir);
+									
+									foreach($ffs as $ff){
+										if($ff != '.' && $ff != '..'){
+											$contents = file_get_contents($ff);
+											$pattern = '/\$bp-(.*?):(.*?);/';
+											
+											if(preg_match_all($pattern, $contents, $matches)){
+												//$phases = array_unique($matches[2]);
+												for($i = 0; $i < count($matches[0]); ++$i){
+													echo '<li><a href="#" class="sg-size" data-size="'.trim($matches[2][$i]).'">'.trim($matches[1][$i]).'</a></li>';
+												}
+											}
+										}
+									}
+								}
+		
+								listSassVariables($sassPath);
+								?>
+							</ul>
+						</li>
 						<li class="sg-view">
 							<a href="#" class="sg-acc-handle sg-control-trigger" id="sg-t-toggle">View</a>
 							<ul class="sg-view sg-acc-panel" id="sg-view">
