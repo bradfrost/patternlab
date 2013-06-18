@@ -50,6 +50,23 @@
 		$this.addClass('active');
 	});
 	
+	//Phase View Events
+	$('.sg-size[data-size]').on("click", function(e){
+		e.preventDefault();
+		killDisco();
+		killHay();
+		
+		var val = $(this).attr('data-size'),
+			bodySize = parseInt($('body').css('font-size'));
+		
+		if (val.indexOf('px') > -1) {
+			bodySize = 1;
+		}
+		
+		val = val.replace(/[^\d.-]/g,'')		
+		sizeiframe(Math.floor(val*bodySize));
+	});
+	
 	//Size View Events
 
 	//Click Size Small Button
