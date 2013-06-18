@@ -109,28 +109,16 @@ header, footer, nav, section, article, hgroup, figure {
   text-align: left; }
 
 /* Display Classes */
-@media all and (min-width: 24em) {
+@media all and (max-width: 46.8em) {
   .hide-small {
     display: none; } }
 
-@media all and (max-width: 24em) {
-  .hide-small-max {
-    display: none; } }
-
-@media all and (min-width: 46.8em) {
+@media all and (min-width: 46.8em) and (max-width: 50em) {
   .hide-med {
-    display: none; } }
-
-@media all and (max-width: 46.8em) {
-  .hide-med-max {
     display: none; } }
 
 @media all and (min-width: 50em) {
   .hide-large {
-    display: none; } }
-
-@media all and (max-width: 50em) {
-  .hide-large-max {
     display: none; } }
 
 .valid {

@@ -3,7 +3,6 @@
 		sh = document.body.clientHeight, //Viewport Height
 		minViewportWidth = 240, //Minimum Size for Viewport
 		maxViewportWidth = 2600, //Maxiumum Size for Viewport
-		bp = window.getComputedStyle(document.body,':after').getPropertyValue('content'), //Get breakpoint size from CSS
 		$sgViewport = $('#sg-viewport'), //Viewport element
 		$viewToggle = $('#sg-t-toggle'), //Toggle 
 		$sizeToggle = $('#sg-size-toggle'),
@@ -19,8 +18,6 @@
 	$(w).resize(function(){ //Update dimensions on resize
 		sw = document.body.clientWidth;
 		sh = document.body.clientHeight;
-		bp = window.getComputedStyle(document.body,':after').getPropertyValue('content');
-		
 		displayWidth();
 	});
 

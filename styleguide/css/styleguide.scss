@@ -111,16 +111,9 @@ html, body {
 	-webkit-text-size-adjust: 100%;
 }
 
-body.sg-nav-wrapper {
+.sg-nav-wrapper {
 	overflow: hidden;
-	background: $sg-secondary;
-}
-
-body:after {
-	@media all and (min-width: $sg-bp-large) {
-        content: 'large';
-        display: none;
-    }
+	background: $sg-tertiary;
 }
 
 

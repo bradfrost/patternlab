@@ -54,14 +54,9 @@ html, body {
   padding: 0;
   -webkit-text-size-adjust: 100%; }
 
-body.sg-nav-wrapper {
+.sg-nav-wrapper {
   overflow: hidden;
-  background: gray; }
-
-@media all and (min-width: 65em) {
-  body:after {
-    content: 'large';
-    display: none; } }
+  background: #dddddd; }
 
 /*------------------------------------*\
     $STYLE GUIDE HEADER 
@@ -192,9 +187,9 @@ body.sg-nav-wrapper {
   .sg-controls .sg-acc-panel.active {
     max-height: 17em; }
   .sg-controls .sg-nav-phases .sg-acc-panel {
-	min-width: 0; }
-  .sg-controls .sg-nav-phases .sg-acc-panel.active {
-	max-height: none; }
+    min-width: 0; }
+    .sg-controls .sg-nav-phases .sg-acc-panel.active {
+      max-height: none; }
 
 .sg-control-trigger {
   border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
