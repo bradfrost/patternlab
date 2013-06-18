@@ -109,11 +109,11 @@ header, footer, nav, section, article, hgroup, figure {
   text-align: left; }
 
 /* Display Classes */
-@media all and (max-width: 24em) {
+@media all and (min-width: 24em) {
   .hide-small {
     display: none; } }
 
-@media all and (min-width: 24em) {
+@media all and (max-width: 24em) {
   .hide-small-max {
     display: none; } }
 
