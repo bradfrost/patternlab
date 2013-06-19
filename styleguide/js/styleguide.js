@@ -150,8 +150,6 @@
 	$('.sg-size-px').on("keydown", function(e){
 		var val = $(this).val();
 
-		console.log('poop');
-
 	    if(e.keyCode == 13) { //If the Enter key is hit
 	    	e.preventDefault();
 			sizeiframe(Math.floor(val)); //Size Iframe to value of text box
