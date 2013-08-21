@@ -2,8 +2,13 @@
 
 $root = $_SERVER['DOCUMENT_ROOT'];
 
+
 //This changes the root path of the project. It might live at the root or at a subdirectory like /styleguide
-$absolutePath = '/';
+if(file_exists('local.path.php')) {
+	include 'local.path.php';
+} else {
+	$absolutePath = '/';
+}
 
 $patternsPath = $root.$absolutePath.'patterns/';
 $sassPath = $root.$absolutePath.'css/scss/';

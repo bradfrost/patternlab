@@ -1,0 +1,7 @@
+<!--
+	To set local path, duplicate this file without the .default append <local.path.php>, and set the path below.
+
+	Make sure the non-appended file is in the version control ignore to avoid overwriting on other machines.
+-->
+<?php
+	$absolutePath = '/patternlab/';
