@@ -49,14 +49,12 @@
 /*------------------------------------*\
     $STYLE GUIDE INTERFACE
 \*------------------------------------*/
-/* line 108, styleguide.scss */
 html, body {
   margin: 0;
   padding: 0;
   -webkit-text-size-adjust: 100%;
 }
 
-/* line 114, styleguide.scss */
 .sg-nav-wrapper {
   overflow: hidden;
   background: #dddddd;
@@ -66,7 +64,6 @@ html, body {
     $STYLE GUIDE HEADER
 \*------------------------------------*/
 /* Header */
-/* line 127, styleguide.scss */
 .sg-header {
   background: #222222;
   color: white;
@@ -81,23 +78,19 @@ html, body {
   -moz-box-shadow: inset 0 1px 0 #5f6164, inset 0 -1px 0 #2e2f2f, 0 1px 3px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0 1px 0 #5f6164, inset 0 -1px 0 #2e2f2f, 0 1px 3px rgba(0, 0, 0, 0.3);
 }
-/* line 142, styleguide.scss */
 .sg-header * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 148, styleguide.scss */
 .sg-header ul, .sg-header ol {
   padding: 0;
   margin: 0;
 }
-/* line 153, styleguide.scss */
 .sg-header li {
   list-style: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
-/* line 157, styleguide.scss */
 .sg-header a {
   font-size: 70%;
   color: gray;
@@ -116,14 +109,12 @@ html, body {
   -o-transition: color 0.15s ease-out;
   transition: color 0.15s ease-out;
 }
-/* line 167, styleguide.scss */
 .sg-header a:hover, .sg-header a:focus, .sg-header a.active {
   color: white;
   background: rgba(255, 255, 255, 0.05);
 }
 
 /* Navigation */
-/* line 177, styleguide.scss */
 .sg-header .sg-nav-toggle {
   padding: 1em;
   border-bottom: 1px solid rgba(0, 0, 0, 0);
@@ -131,14 +122,12 @@ html, body {
   z-index: 2;
 }
 @media all and (min-width: 44em) {
-  /* line 177, styleguide.scss */
   .sg-header .sg-nav-toggle {
     display: none;
   }
 }
 
 @media all and (max-width: 44em) {
-  /* line 187, styleguide.scss */
   .sg-nav-container {
     overflow: hidden;
     max-height: 0;
@@ -148,13 +137,11 @@ html, body {
     -o-transition: max-height 0.5s ease-out;
     transition: max-height 0.5s ease-out;
   }
-  /* line 193, styleguide.scss */
   .sg-nav-container.active {
     max-height: 50em;
   }
 }
 
-/* line 199, styleguide.scss */
 .sg-nav {
   z-index: 1;
   margin: 0;
@@ -162,14 +149,12 @@ html, body {
   list-style: none;
 }
 @media all and (min-width: 44em) {
-  /* line 205, styleguide.scss */
   .sg-nav > li {
     border-bottom: 0;
     border-right: 1px solid rgba(255, 255, 255, 0.05);
     float: left;
     position: relative;
   }
-  /* line 213, styleguide.scss */
   .sg-nav > li > ol {
     position: absolute;
     top: 2em;
@@ -177,40 +162,33 @@ html, body {
   }
 }
 
-/* line 224, styleguide.scss */
 .sg-nav-Pages ol {
   width: 24em;
 }
-/* line 227, styleguide.scss */
 .sg-nav-Pages li {
   float: left;
   width: 50%;
 }
 
 /* Accordion */
-/* line 235, styleguide.scss */
 .sg-acc-handle:after {
   content: ' +';
   float: right;
   font-size: 70%;
 }
 @media all and (min-width: 44em) {
-  /* line 235, styleguide.scss */
   .sg-acc-handle:after {
     float: none;
   }
 }
-/* line 245, styleguide.scss */
 .sg-acc-handle.active {
   color: white;
   background: rgba(255, 255, 255, 0.05);
 }
-/* line 248, styleguide.scss */
 .sg-acc-handle.active:after {
   content: ' -';
 }
 
-/* line 255, styleguide.scss */
 .sg-acc-panel {
   overflow: hidden;
   max-height: 0;
@@ -222,13 +200,11 @@ html, body {
   -o-transition: max-height 0.5s ease-out;
   transition: max-height 0.5s ease-out;
 }
-/* line 261, styleguide.scss */
 .sg-acc-panel.active {
   max-height: 50em;
 }
 
 /* Controls (sizing, view mode) */
-/* line 267, styleguide.scss */
 .sg-controls {
   border: 0;
   position: absolute;
@@ -236,31 +212,25 @@ html, body {
   right: 0;
   z-index: 2;
 }
-/* line 274, styleguide.scss */
 .sg-controls .sg-acc-panel.active {
   max-height: 17em;
 }
-/* line 278, styleguide.scss */
 .sg-controls .sg-nav-phases .sg-acc-panel {
   min-width: 0;
 }
-/* line 281, styleguide.scss */
 .sg-controls .sg-nav-phases .sg-acc-panel.active {
   max-height: none;
 }
 
-/* line 287, styleguide.scss */
 .sg-control-trigger {
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 @media all and (min-width: 44em) {
-  /* line 287, styleguide.scss */
   .sg-control-trigger {
     border: 0;
   }
 }
 @media all and (min-width: 65em) {
-  /* line 287, styleguide.scss */
   .sg-control-trigger {
     float: left;
     width: 6em;
@@ -268,7 +238,6 @@ html, body {
 }
 
 @media all and (min-width: 44em) {
-  /* line 301, styleguide.scss */
   .sg-control > li {
     float: left;
     border-bottom: 0;
@@ -276,11 +245,9 @@ html, body {
   }
 }
 
-/* line 314, styleguide.scss */
 .sg-control > li {
   float: left;
 }
-/* line 318, styleguide.scss */
 .sg-control .sg-input {
   padding: 0.1em;
   -webkit-transition: all 0.2s ease-out;
@@ -289,7 +256,6 @@ html, body {
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-/* line 326, styleguide.scss */
 .sg-control .sg-input:active, .sg-control .sg-input:focus {
   outline: 0;
   background: #f7f7f7;
@@ -297,63 +263,53 @@ html, body {
 }
 
 @media all and (max-width: 65em) {
-  /* line 334, styleguide.scss */
   .sg-quarter {
     float: left;
     width: 25%;
     border-left: 1px solid rgba(255, 255, 255, 0.05);
     text-align: center;
   }
-  /* line 341, styleguide.scss */
   .sg-quarter:first-child {
     border-left: 0;
   }
 }
 
 @media all and (max-width: 65em) {
-  /* line 347, styleguide.scss */
   .sg-half {
     float: left;
     width: 50%;
     border-left: 1px solid rgba(255, 255, 255, 0.05);
     text-align: center;
   }
-  /* line 354, styleguide.scss */
   .sg-half:nth-child(odd) {
     border-left: 0;
   }
 }
 
-/* line 360, styleguide.scss */
 .sg-current-size {
   font-size: 70%;
   color: gray;
   padding: 0.8em 0.95em;
 }
-/* line 366, styleguide.scss */
 .sg-current-size:hover .sg-input {
   background: #f7f7f7;
   color: #000;
 }
 @media all and (min-width: 65em) {
-  /* line 360, styleguide.scss */
   .sg-current-size {
     float: left;
   }
 }
 
-/* line 377, styleguide.scss */
 .sg-size-options {
   max-width: 10em;
 }
 @media all and (min-width: 65em) {
-  /* line 377, styleguide.scss */
   .sg-size-options {
     position: static;
     max-height: none;
     max-width: none;
   }
-  /* line 385, styleguide.scss */
   .sg-size-options li {
     float: left;
     border: 0;
@@ -361,14 +317,12 @@ html, body {
   }
 }
 
-/* line 393, styleguide.scss */
 #sg-form {
   margin: 0;
   border: 0;
   padding: 0;
 }
 
-/* line 398, styleguide.scss */
 .sg-input {
   margin: -2px 0 0 0;
   padding: 0;
@@ -379,17 +333,14 @@ html, body {
   text-align: right;
 }
 
-/* line 408, styleguide.scss */
 .sg-input-active {
   background-color: #fff;
   color: #000;
 }
 
-/* line 413, styleguide.scss */
 .sg-view {
   position: relative;
 }
-/* line 416, styleguide.scss */
 .sg-view > ul {
   position: absolute;
   top: 2em;
@@ -400,13 +351,11 @@ html, body {
     $STYLE GUIDE VIEWPORT
 \*------------------------------------*/
 /* Viewport */
-/* line 430, styleguide.scss */
 #sg-vp-wrap {
   text-align: center;
   width: 100%;
 }
 @media all and (min-width: 44em) {
-  /* line 430, styleguide.scss */
   #sg-vp-wrap {
     position: fixed;
     top: 2em;
@@ -416,7 +365,6 @@ html, body {
     z-index: 0;
   }
 }
-/* line 443, styleguide.scss */
 #sg-vp-wrap.wrap-animate {
   -webkit-transition: left 0.3s ease-out;
   -moz-transition: left 0.3s ease-out;
@@ -425,13 +373,11 @@ html, body {
   transition: left 0.3s ease-out;
 }
 
-/* line 453, styleguide.scss */
 #sg-viewport {
   border: 0;
   height: 100%;
   width: 100%;
 }
-/* line 459, styleguide.scss */
 #sg-viewport.hay-mode {
   -webkit-transition: all 40s linear;
   -moz-transition: all 40s linear;
@@ -440,7 +386,6 @@ html, body {
   transition: all 40s linear;
 }
 
-/* line 468, styleguide.scss */
 #sg-cover {
   width: 100%;
   height: 100%;
@@ -450,13 +395,11 @@ html, body {
   cursor: col-resize;
 }
 
-/* line 477, styleguide.scss */
 #sg-gen-container {
   height: 100%;
   text-align: center;
   margin: 0 auto;
 }
-/* line 482, styleguide.scss */
 #sg-gen-container.hay-mode {
   -webkit-transition: all 40s linear;
   -moz-transition: all 40s linear;
@@ -465,7 +408,6 @@ html, body {
   transition: all 40s linear;
 }
 
-/* line 491, styleguide.scss */
 #sg-rightpull-container {
   width: 10px;
   float: right;
@@ -474,7 +416,6 @@ html, body {
   cursor: col-resize;
 }
 
-/* line 499, styleguide.scss */
 #sg-rightpull {
   margin: 0;
   width: 10px;
@@ -486,17 +427,14 @@ html, body {
   -o-transition: background 0.2s ease-out;
   transition: background 0.2s ease-out;
 }
-/* line 510, styleguide.scss */
 #sg-rightpull:hover {
   background: #666;
 }
-/* line 514, styleguide.scss */
 #sg-rightpull:active {
   cursor: col-resize;
   background: #444;
 }
 
-/* line 520, styleguide.scss */
 .vp-animate {
   -webkit-transition: width 0.8s ease-out;
   -moz-transition: width 0.8s ease-out;
@@ -509,7 +447,6 @@ html, body {
     $STYLE GUIDE CONTENT
 \*------------------------------------*/
 /* Section Head */
-/* line 537, styleguide.scss */
 .sg-head {
   margin: 2em 0;
   font-family: "HelveticaNeue", "Helvetica", "Arial", sans-serif;
@@ -517,21 +454,18 @@ html, body {
   font-weight: normal;
   padding: 1em;
 }
-/* line 543, styleguide.scss */
 .sg-head a {
   display: block;
   border-bottom: 1px solid #222222;
   color: #222;
   text-decoration: none;
 }
-/* line 548, styleguide.scss */
 .sg-head a:hover {
   color: gray;
   border-bottom-color: gray;
 }
 
 /* Section Pattern */
-/* line 556, styleguide.scss */
 .sg-pattern {
   margin-bottom: 2em;
   padding: 0 1em;
@@ -539,24 +473,20 @@ html, body {
 }
 
 /* Section Sub-head */
-/* line 563, styleguide.scss */
 .sg-sub a:link {
   color: gray;
   border-bottom-color: gray;
 }
-/* line 566, styleguide.scss */
 .sg-sub a:link:hover {
   color: #222222;
   border-bottom-color: #222222;
 }
 
 /* Clean View */
-/* line 573, styleguide.scss */
 .sg-clean .sg-main {
   padding: 0;
 }
 
-/* line 579, styleguide.scss */
 .sg-code, .sg-annotations {
   clear: both;
   background: #dddddd;
@@ -565,7 +495,6 @@ html, body {
   margin: 1em 0;
 }
 
-/* line 587, styleguide.scss */
 .sg-code {
   white-space: -moz-pre-wrap;
   white-space: -pre-wrap;
@@ -574,13 +503,11 @@ html, body {
   white-space: pre-wrap;
 }
 
-/* line 596, styleguide.scss */
 .demo {
   overflow: hidden;
   margin-bottom: 1rem;
 }
 
-/* line 600, styleguide.scss */
 .demo .gi, .demo .demo-block {
   background: #dddddd;
   color: gray;
@@ -588,22 +515,18 @@ html, body {
   margin-bottom: 0.5em;
   padding: 1em !important;
 }
-/* line 607, styleguide.scss */
 .demo .gi:nth-of-type(2n), .demo .demo-block:nth-of-type(2n) {
   color: #dddddd;
   background: gray;
 }
-/* line 612, styleguide.scss */
 .demo .gi .gi, .demo .demo-block .gi {
   background: rgba(0, 0, 0, 0.1);
   color: #dddddd;
 }
-/* line 616, styleguide.scss */
 .demo .gi .gi:nth-of-type(2n), .demo .demo-block .gi:nth-of-type(2n) {
   background: rgba(0, 0, 0, 0.3);
 }
 
-/* line 623, styleguide.scss */
 .demo-animate {
   background: #dddddd;
   padding: 1em;
@@ -611,11 +534,9 @@ html, body {
   text-align: center;
 }
 
-/* line 630, styleguide.scss */
 .animate-move {
   position: relative;
 }
-/* line 633, styleguide.scss */
 .animate-move .demo-shape {
   position: absolute;
   top: 0;
@@ -624,17 +545,14 @@ html, body {
   width: 20px;
   background: gray;
 }
-/* line 643, styleguide.scss */
 .animate-move:hover > .demo-shape {
   left: 100%;
   margin-left: -20px;
 }
 
-/* line 651, styleguide.scss */
 .sg-colors {
   overflow: hidden;
 }
-/* line 654, styleguide.scss */
 .sg-colors li {
   overflow: hidden;
   border: 1px solid #dddddd;
@@ -642,28 +560,24 @@ html, body {
   margin: 0 0.2em 0.2em 0;
 }
 @media all and (min-width: 30em) {
-  /* line 654, styleguide.scss */
   .sg-colors li {
     float: left;
     width: 5em;
   }
 }
 
-/* line 667, styleguide.scss */
 .sg-swatch {
   display: block;
   height: 1.5em;
   width: 50%;
 }
 @media all and (max-width: 30em) {
-  /* line 667, styleguide.scss */
   .sg-swatch {
     float: left;
     margin-right: 0.3em;
   }
 }
 @media all and (min-width: 30em) {
-  /* line 667, styleguide.scss */
   .sg-swatch {
     width: 100%;
     height: 4em;
@@ -671,12 +585,10 @@ html, body {
   }
 }
 
-/* line 685, styleguide.scss */
 .sg-label {
   line-height: 1;
 }
 
-/* line 690, styleguide.scss */
 #comment-container {
   position: fixed;
   bottom: 0;
