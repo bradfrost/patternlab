@@ -2,22 +2,22 @@
     $STYLE GUIDE CONTAINER STYLES
 \*------------------------------------*/
 /**
- * NOTE: These styles are specific to the style guide container and should not be modified. 
+ * NOTE: These styles are specific to the style guide container and should not be modified.
  * Use style.scss for all content styles that don't pertain to the style guide container.
- * 
- * Second note: Any important declarations are to prevent brand styles from overriding style guide 
+ *
+ * Second note: Any important declarations are to prevent brand styles from overriding style guide
  */
 /*------------------------------------*\
     $CONTENTS
 \*------------------------------------*/
 /**
- * STYLE GUIDE VARIABLES------------------Declarations of Sass variables 
+ * STYLE GUIDE VARIABLES------------------Declarations of Sass variables
  * -----Font
  * -----Colors
  * -----Typography
  * -----Defaults
  * -----Breakpoints
- * MIXINS---------------------------------Sass mixins 
+ * MIXINS---------------------------------Sass mixins
  * RESET----------------------------------Set reset defaults
  * GLOBAL ELEMENTS------------------------Establish global styles
  * -----Main
@@ -35,7 +35,7 @@
  * -----Code View
  */
 /*------------------------------------*\
-    $STYLE GUIDE VARIABLES 
+    $STYLE GUIDE VARIABLES
 \*------------------------------------*/
 /*Fonts*/
 /* Style Guide Interface Colors */
@@ -44,10 +44,10 @@
 /* Dimensions */
 /* Breakpoints */
 /*------------------------------------*\
-    $STYLE GUIDE MIXINS 
+    $STYLE GUIDE MIXINS
 \*------------------------------------*/
 /*------------------------------------*\
-    $STYLE GUIDE INTERFACE 
+    $STYLE GUIDE INTERFACE
 \*------------------------------------*/
 /* line 108, styleguide.scss */
 html, body {
@@ -63,7 +63,7 @@ html, body {
 }
 
 /*------------------------------------*\
-    $STYLE GUIDE HEADER 
+    $STYLE GUIDE HEADER
 \*------------------------------------*/
 /* Header */
 /* line 127, styleguide.scss */
@@ -428,7 +428,6 @@ html, body {
 /* line 453, styleguide.scss */
 #sg-viewport {
   border: 0;
-  x-margin: 0 auto;
   height: 100%;
   width: 100%;
 }
@@ -507,7 +506,7 @@ html, body {
 }
 
 /*------------------------------------*\
-    $STYLE GUIDE CONTENT 
+    $STYLE GUIDE CONTENT
 \*------------------------------------*/
 /* Section Head */
 /* line 537, styleguide.scss */
