@@ -3,7 +3,7 @@
 $root = $_SERVER['DOCUMENT_ROOT'];
 
 //This changes the root path of the project. It might live at the root or at a subdirectory like /styleguide
-$absolutePath = '/patternlab/';
+$absolutePath = '/';
 
 $patternsPath = $root.$absolutePath.'patterns/';
 $sassPath = $root.$absolutePath.'css/scss/';
