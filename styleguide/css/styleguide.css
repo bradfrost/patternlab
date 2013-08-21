@@ -428,7 +428,6 @@ html, body {
 /* line 453, styleguide.scss */
 #sg-viewport {
   border: 0;
-  x-margin: 0 auto;
   height: 100%;
   width: 100%;
 }
