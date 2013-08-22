@@ -2,22 +2,22 @@
     $STYLE GUIDE CONTAINER STYLES
 \*------------------------------------*/
 /**
- * NOTE: These styles are specific to the style guide container and should not be modified. 
+ * NOTE: These styles are specific to the style guide container and should not be modified.
  * Use style.scss for all content styles that don't pertain to the style guide container.
- * 
- * Second note: Any important declarations are to prevent brand styles from overriding style guide 
+ *
+ * Second note: Any important declarations are to prevent brand styles from overriding style guide
  */
 /*------------------------------------*\
     $CONTENTS
 \*------------------------------------*/
 /**
- * STYLE GUIDE VARIABLES------------------Declarations of Sass variables 
+ * STYLE GUIDE VARIABLES------------------Declarations of Sass variables
  * -----Font
  * -----Colors
  * -----Typography
  * -----Defaults
  * -----Breakpoints
- * MIXINS---------------------------------Sass mixins 
+ * MIXINS---------------------------------Sass mixins
  * RESET----------------------------------Set reset defaults
  * GLOBAL ELEMENTS------------------------Establish global styles
  * -----Main
@@ -35,7 +35,7 @@
  * -----Code View
  */
 /*------------------------------------*\
-    $STYLE GUIDE VARIABLES 
+    $STYLE GUIDE VARIABLES
 \*------------------------------------*/
 /*Fonts*/
 /* Style Guide Interface Colors */
@@ -44,10 +44,10 @@
 /* Dimensions */
 /* Breakpoints */
 /*------------------------------------*\
-    $STYLE GUIDE MIXINS 
+    $STYLE GUIDE MIXINS
 \*------------------------------------*/
 /*------------------------------------*\
-    $STYLE GUIDE INTERFACE 
+    $STYLE GUIDE INTERFACE
 \*------------------------------------*/
 html, body {
   margin: 0;
@@ -59,7 +59,7 @@ html, body {
   background: #dddddd; }
 
 /*------------------------------------*\
-    $STYLE GUIDE HEADER 
+    $STYLE GUIDE HEADER
 \*------------------------------------*/
 /* Header */
 .sg-header {
@@ -311,7 +311,7 @@ html, body {
 
 #sg-viewport {
   border: 0;
-  x-margin: 0 auto;
+  /*margin: 0 auto;*/
   height: 100%;
   width: 100%; }
   #sg-viewport.hay-mode {
@@ -371,7 +371,7 @@ html, body {
   transition: width 0.8s ease-out; }
 
 /*------------------------------------*\
-    $STYLE GUIDE CONTENT 
+    $STYLE GUIDE CONTENT
 \*------------------------------------*/
 /* Section Head */
 .sg-head {
