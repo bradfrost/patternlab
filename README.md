@@ -1,9 +1,7 @@
-Pattern Lab
-==
-Pattern Lab is a collection of tools to help create and maintain atomic web design systems.
+# This Version of Pattern Lab has been Discontinued 
 
-## Atomic Design
-All matter, no matter how complex, can be broken down into molecules which can be broken down further into atomic elements. All web interfaces can be broken down down the same way.  Atomic Design provides a methodology for building an effective design system. It consists of five distinct stages: atoms, molecules, organisms, templates and pages.
+The version of Pattern Lab available in this repository has been discontinued. It remains available available in case someone wants to use it but there is another, newer [PHP version of Pattern Lab](https://github.com/pattern-lab/patternlab-php) that will be actively maintained in the future. For more information on why there's a new version [check out our blog post](http://dmolsen.com/2013/04/25/pattern-lab-gets-a-behind-the-scenes-makeover/).
 
-## Pattern Lab
-More documentation coming very soon. In the meantime, check out [these notes](http://jancbeck.com/articles/btconf-brad-frost/).
+## Have Patterns You Want to Migrate?
+
+Migrating patterns built for this version to the new version of Pattern Lab should be relatively straightforward. [Learn more](https://github.com/pattern-lab/patternlab-php/wiki/Converting-Old-Patterns).
